@@ -2,7 +2,7 @@
 
 This project is part of the Game Design class.
 ---
-## TODO LIST
+## 📋 TODO LIST
  - [ ] Prototype
 	 - [ ] Narrative (pop up text? new scene?)
 	 - [ ] Main scene
