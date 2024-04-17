@@ -2913,7 +2913,7 @@ radius = 10.0125
 [node name="Scene" type="Node2D"]
 scale = Vector2(4, 4)
 
-[node name="tilemap2" type="TileMap" parent="."]
+[node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
 tile_set = SubResource("TileSet_6hv1t")
 format = 2
