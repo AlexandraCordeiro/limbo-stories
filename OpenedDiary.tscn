@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://ndam2p3mu7pm"]
 
 [ext_resource type="TileSet" uid="uid://ct6sw08d4ado6" path="res://diary_tile_set.tres" id="1_xo4wu"]
-[ext_resource type="Texture2D" uid="uid://ch0mau7q2ldkt" path="res://Pixel Paper v1.0/1 Sprites/Sprites/Design/Buttons & Holders/59.png" id="4_4lcwu"]
+[ext_resource type="Texture2D" uid="uid://ch0mau7q2ldkt" path="res://sprites/Pixel Paper v1.0/1 Sprites/Sprites/Design/Buttons & Holders/59.png" id="4_4lcwu"]
 [ext_resource type="Script" path="res://closeDiary.gd" id="9_e4kgc"]
 [ext_resource type="FontFile" uid="uid://dvi1mrl7seh6x" path="res://fonts/ReenieBeanie-Regular.ttf" id="10_qt7h4"]
 

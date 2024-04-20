@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://ct6sw08d4ado6" path="res://diary_tile_set.tres" id="1_fckid"]
 [ext_resource type="Script" path="res://closeDiary.gd" id="2_1ep38"]
-[ext_resource type="Texture2D" uid="uid://ch0mau7q2ldkt" path="res://Pixel Paper v1.0/1 Sprites/Sprites/Design/Buttons & Holders/59.png" id="3_bb8m4"]
+[ext_resource type="Texture2D" uid="uid://ch0mau7q2ldkt" path="res://sprites/Pixel Paper v1.0/1 Sprites/Sprites/Design/Buttons & Holders/59.png" id="3_bb8m4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_07og5"]
 
