@@ -2,12 +2,12 @@
 
 [ext_resource type="TileSet" uid="uid://ct6sw08d4ado6" path="res://diary_tile_set.tres" id="1_fckid"]
 [ext_resource type="Script" path="res://closeDiary.gd" id="2_1ep38"]
-[ext_resource type="Script" path="res://nextPageButton.gd" id="3_sy4se"]
+[ext_resource type="Texture2D" uid="uid://ch0mau7q2ldkt" path="res://Pixel Paper v1.0/1 Sprites/Sprites/Design/Buttons & Holders/59.png" id="3_bb8m4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_07og5"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_fwxim"]
-radius = 10.198
+[sub_resource type="CircleShape2D" id="CircleShape2D_qw4y1"]
+radius = 5.7717
 
 [node name="ClosedBook" type="Node2D"]
 scale = Vector2(4, 4)
@@ -42,11 +42,16 @@ script = ExtResource("2_1ep38")
 position = Vector2(272, 15)
 shape = SubResource("CircleShape2D_07og5")
 
-[node name="nextPageButton" type="Area2D" parent="."]
-script = ExtResource("3_sy4se")
+[node name="nextPage" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="nextPageButton"]
-position = Vector2(312, 120)
-shape = SubResource("CircleShape2D_fwxim")
+[node name="Sprite2D" type="Sprite2D" parent="nextPage"]
+texture_filter = 1
+position = Vector2(198.5, 87.25)
+scale = Vector2(0.765625, 0.765625)
+texture = ExtResource("3_bb8m4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="nextPage"]
+position = Vector2(197.75, 87.5)
+shape = SubResource("CircleShape2D_qw4y1")
 
 [connection signal="input_event" from="closeDiaryButton" to="closeDiaryButton" method="_on_input_event"]

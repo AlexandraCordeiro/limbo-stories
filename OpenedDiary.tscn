@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://ndam2p3mu7pm"]
+[gd_scene load_steps=8 format=3 uid="uid://ndam2p3mu7pm"]
 
 [ext_resource type="TileSet" uid="uid://ct6sw08d4ado6" path="res://diary_tile_set.tres" id="1_xo4wu"]
+[ext_resource type="Texture2D" uid="uid://ch0mau7q2ldkt" path="res://Pixel Paper v1.0/1 Sprites/Sprites/Design/Buttons & Holders/59.png" id="4_4lcwu"]
 [ext_resource type="Script" path="res://closeDiary.gd" id="9_e4kgc"]
 [ext_resource type="FontFile" uid="uid://dvi1mrl7seh6x" path="res://fonts/ReenieBeanie-Regular.ttf" id="10_qt7h4"]
 
@@ -19,6 +20,10 @@ func _process(delta):
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vgx1b"]
+radius = 8.34416
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qx8eq"]
+radius = 5.7717
 
 [node name="OpenedDiary" type="Node2D"]
 scale = Vector2(4, 4)
@@ -64,7 +69,32 @@ metadata/_edit_use_anchors_ = true
 script = ExtResource("9_e4kgc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="closeDiaryButton"]
-position = Vector2(272.75, 15.75)
+position = Vector2(271.75, 14.5)
 shape = SubResource("CircleShape2D_vgx1b")
+
+[node name="nextPage" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="nextPage"]
+texture_filter = 1
+position = Vector2(262.25, 87.25)
+scale = Vector2(0.765625, 0.765625)
+texture = ExtResource("4_4lcwu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="nextPage"]
+position = Vector2(261.5, 87.5)
+shape = SubResource("CircleShape2D_qx8eq")
+
+[node name="previousPage" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="previousPage"]
+texture_filter = 1
+position = Vector2(57.5, 87.75)
+rotation = 3.14159
+scale = Vector2(0.765625, 0.765625)
+texture = ExtResource("4_4lcwu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="previousPage"]
+position = Vector2(58.75, 87.5)
+shape = SubResource("CircleShape2D_qx8eq")
 
 [connection signal="input_event" from="closeDiaryButton" to="closeDiaryButton" method="_on_input_event"]
