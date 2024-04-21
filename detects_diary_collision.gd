@@ -2,10 +2,8 @@ extends Area2D
 
 var entered = false
 var scene_changed = false
-var diary_scene
 
-func _init():
-	diary_scene = preload("res://OpenedDiary.tscn").instantiate()
+
 func _on_body_entered(body):
 	if body is Player:
 		entered = true
@@ -15,11 +13,14 @@ func _on_body_entered(body):
 func _on_body_exited(body):
 	if body is Player:
 		entered = false
-		global.diaryWasFound = true
+		global.diary_was_found = true
 		# print("exited\n")
 
 func _process(_delta):
+	if global.read_mode:
+		self.visible = false
 	if entered and !scene_changed:
-		get_tree().root.add_child(diary_scene)
+		get_tree().root.add_child(global.first_entry)
 		scene_changed = true
+		global.read_mode = true
 		
