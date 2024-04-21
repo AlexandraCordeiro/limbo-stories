@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b8ic7capsi6c2" path="res://sprites/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="7_oiav7"]
 [ext_resource type="Texture2D" uid="uid://bhuaajo2neb6r" path="res://sprites/Free Paper UI System/1 Sprites/Content/2 Icons/8.png" id="8_5301u"]
 [ext_resource type="Texture2D" uid="uid://bvypqih7nmnd7" path="res://sprites/Free Paper UI System/1 Sprites/Content/1 Items/15.png" id="9_dnhbu"]
-[ext_resource type="Texture2D" uid="uid://b2prjvrra8k1y" path="res://UI books & more.png" id="10_e6hhw"]
+[ext_resource type="Texture2D" uid="uid://b2prjvrra8k1y" path="res://sprites/UI books & more.png" id="10_e6hhw"]
 [ext_resource type="Texture2D" uid="uid://c5bxs077nsbsp" path="res://sprites/Free Paper UI System/1 Sprites/Content/6 High lighter/8.png" id="11_6jnq6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xcpq3"]

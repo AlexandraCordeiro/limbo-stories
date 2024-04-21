@@ -22,7 +22,7 @@
 [ext_resource type="Script" path="res://main_character.gd" id="20_qsf63"]
 [ext_resource type="Texture2D" uid="uid://dp41uclk0muh" path="res://sprites/Blue_witch/B_witch_idle.png" id="20_vfxvt"]
 [ext_resource type="Texture2D" uid="uid://bqai1v8q3bbea" path="res://sprites/Blue_witch/B_witch_run.png" id="21_g0ag1"]
-[ext_resource type="Script" path="res://diary.gd" id="23_1q7dr"]
+[ext_resource type="Script" path="res://detects_diary_collision.gd" id="23_1q7dr"]
 [ext_resource type="Texture2D" uid="uid://b0o6nj218r5fc" path="res://sprites/Free Paper UI System/1 Sprites/Content/1 Items/1.png" id="23_2gv7b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tw42p"]

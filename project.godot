@@ -14,3 +14,7 @@ config/name="limbo"
 run/main_scene="res://scene.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+global="*res://global_script.gd"
