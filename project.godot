@@ -30,6 +30,11 @@ directories/dtl_directory={
 "startGame": "res://addons/dialogic/timelines/startGame.dtl"
 }
 
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
