@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d2nquv1nlhlfb"]
+[gd_scene load_steps=7 format=3 uid="uid://u5c6udu6vf1j"]
 
 [ext_resource type="TileSet" uid="uid://ct6sw08d4ado6" path="res://diary_tile_set.tres" id="1_7ueoh"]
 [ext_resource type="FontFile" uid="uid://dvi1mrl7seh6x" path="res://fonts/ReenieBeanie-Regular.ttf" id="2_xx6s2"]
@@ -6,12 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://ch0mau7q2ldkt" path="res://sprites/Pixel Paper v1.0/1 Sprites/Sprites/Design/Buttons & Holders/59.png" id="4_kjh01"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dpikl"]
+radius = 10.7616
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wb86e"]
 radius = 5.7717
 
 [node name="second_entry" type="Node2D"]
 scale = Vector2(4, 4)
+metadata/_edit_horizontal_guides_ = [320.0]
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -48,35 +50,37 @@ Today my grandson came hiking with me! He's old enough to go further, so I decid
 metadata/_edit_use_anchors_ = true
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(272, 14.5)
 script = ExtResource("3_n1dwx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(271.5, 14.75)
+position = Vector2(-0.25, 0.25)
 shape = SubResource("CircleShape2D_dpikl")
 
 [node name="nextPage" type="Area2D" parent="."]
+position = Vector2(261.75, 80)
 
 [node name="Sprite2D" type="Sprite2D" parent="nextPage"]
 texture_filter = 1
-position = Vector2(262.25, 87.25)
 scale = Vector2(0.765625, 0.765625)
 texture = ExtResource("4_kjh01")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="nextPage"]
-position = Vector2(261.5, 87.5)
 shape = SubResource("CircleShape2D_wb86e")
 
 [node name="previousPage" type="Area2D" parent="."]
+position = Vector2(57.75, 80)
 
 [node name="Sprite2D" type="Sprite2D" parent="previousPage"]
 texture_filter = 1
-position = Vector2(57.5, 87.75)
 rotation = 3.14159
 scale = Vector2(0.765625, 0.765625)
 texture = ExtResource("4_kjh01")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="previousPage"]
-position = Vector2(58.75, 87.5)
 shape = SubResource("CircleShape2D_wb86e")
+
+[node name="Camera2DSecond_entry" type="Camera2D" parent="."]
+anchor_mode = 0
 
 [connection signal="input_event" from="Area2D" to="Area2D" method="_on_input_event"]

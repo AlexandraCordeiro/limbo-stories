@@ -19,8 +19,16 @@ func _on_body_exited(body):
 func _process(_delta):
 	if global.read_mode:
 		self.visible = false
-	if entered and !scene_changed:
-		get_tree().root.add_child(global.first_entry)
-		scene_changed = true
-		global.read_mode = true
-		
+	if entered and !scene_changed and !global.diary_was_found:
+		# Save the player position before changing the scene
+		global.position_find_diary["player"] = position
+		# Delay the scene change by one frame to ensure the position is saved
+		call_deferred("_change_scene")
+	
+func _change_scene():
+	scene_changed = true
+	global.read_mode = true
+	get_tree().change_scene_to_file("res://first_entry.tscn")
+
+
+

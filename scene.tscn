@@ -3765,7 +3765,7 @@ layer_7/tile_data = PackedInt32Array()
 position = Vector2(39, 36.25)
 script = ExtResource("20_qsf63")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="Camera2DPlayer" type="Camera2D" parent="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 texture_filter = 1
@@ -3793,6 +3793,10 @@ texture = ExtResource("23_2gv7b")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="diary"]
 position = Vector2(0.5, 0.25)
 shape = SubResource("CircleShape2D_uirn3")
+
+[node name="Camera2D" type="Camera2D" parent="diary"]
+position = Vector2(-33, -144)
+anchor_mode = 0
 
 [node name="inventory" type="Area2D" parent="."]
 script = ExtResource("24_yu5ds")
