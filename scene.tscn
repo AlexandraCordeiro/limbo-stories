@@ -2905,7 +2905,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8tgk8"]
-radius = 4.56207
+radius = 4.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uirn3"]
 radius = 10.0125
@@ -2935,32 +2935,36 @@ layer_7/name = "house"
 layer_7/tile_data = PackedInt32Array()
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(39, 36.25)
 script = ExtResource("20_qsf63")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 texture_filter = 1
-position = Vector2(84, 113)
+position = Vector2(1.90735e-06, -4.76837e-07)
 scale = Vector2(0.53418, 0.53418)
 sprite_frames = SubResource("SpriteFrames_lcp6p")
 animation = &"run"
 frame_progress = 0.10195
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(84, 119.5)
+position = Vector2(-0.5, 6)
 shape = SubResource("CircleShape2D_8tgk8")
 debug_color = Color(0.403922, 0.466667, 1, 0.419608)
 
 [node name="diary" type="Area2D" parent="."]
+position = Vector2(33, 144)
 script = ExtResource("23_1q7dr")
 
 [node name="Sprite2D" type="Sprite2D" parent="diary"]
 texture_filter = 1
-position = Vector2(52.25, 144.75)
+position = Vector2(0.249989, -1.52588e-05)
 scale = Vector2(0.484375, 0.484375)
 texture = ExtResource("23_2gv7b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="diary"]
-position = Vector2(52.5, 145.25)
+position = Vector2(0.5, 0.25)
 shape = SubResource("CircleShape2D_uirn3")
 
 [connection signal="body_entered" from="diary" to="diary" method="_on_body_entered"]
