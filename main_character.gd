@@ -18,8 +18,14 @@ var state = PlayerState.DIALOGUE
 
 func _ready():
 	Dialogic.signal_event.connect(DialogicSignal)
+	if global.position_find_diary.has("player"):
+		# Set the player position to the position stored in global.position_find_diary
+		position = global.position_find_diary["player"]
 
 func _process(delta):
+	if global.diary_was_found and global.fist_time_scene_principal:
+		global.diary_found(position)
+		global.fist_time_scene_principal = false
 	match state:
 		PlayerState.IDLE:
 			if not is_chatting:
@@ -29,7 +35,6 @@ func _process(delta):
 				run_dialogue("startGame")
 		PlayerState.MOVING:
 			player_movement(delta)
-
 
 
 func player_movement(delta):
@@ -70,6 +75,4 @@ func DialogicSignal(arg: String):
 		print("dialogue start ended")
 		is_chatting = false
 		state = PlayerState.IDLE
-
-	
 
