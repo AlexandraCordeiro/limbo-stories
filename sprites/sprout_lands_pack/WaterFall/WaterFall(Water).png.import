@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvmguqlo3uqww"
-path="res://.godot/imported/forest-palette01-day.png-5a7b629b8fc021c15f3dc1bd9f2aeeaa.ctex"
+uid="uid://ceo6258mjv6sb"
+path="res://.godot/imported/WaterFall(Water).png-4ce27f19511d594cf62a5c6ade72bfe6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/forest tiles/forest-palette01-day.png"
-dest_files=["res://.godot/imported/forest-palette01-day.png-5a7b629b8fc021c15f3dc1bd9f2aeeaa.ctex"]
+source_file="res://sprites/sprout_lands_pack/WaterFall/WaterFall(Water).png"
+dest_files=["res://.godot/imported/WaterFall(Water).png-4ce27f19511d594cf62a5c6ade72bfe6.ctex"]
 
 [params]
 
