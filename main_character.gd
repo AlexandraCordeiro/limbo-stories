@@ -14,24 +14,33 @@ enum PlayerState {
 
 var state = PlayerState.DIALOGUE
 
-@onready var camera = $Camera2D
+@onready var camera = $Camera2DPlayer
 
 func _ready():
 	Dialogic.signal_event.connect(DialogicSignal)
+	if global.position_find_diary.has("player"):
+		# Set the player position to the position stored in global.position_find_diary
+		position = global.position_find_diary["player"]
 
 func _process(delta):
+	if global.diary_was_found and global.fist_time_scene_principal:
+		global.diary_found(position)
+		global.fist_time_scene_principal = false
+		state = PlayerState.DIALOGUE
+		
+	if global.diary_was_found:
+		state = PlayerState.MOVING
+		
 	match state:
 		PlayerState.IDLE:
 			if not is_chatting:
 				player_movement(delta)
 		PlayerState.DIALOGUE:
-			if not is_chatting:
+			if not is_chatting and !global.diary_was_found:
 				run_dialogue("startGame")
 		PlayerState.MOVING:
 			player_movement(delta)
-
-
-
+	
 func player_movement(delta):
 	var direction = Input.get_vector("left", "right", "up", "down")
 	
@@ -47,15 +56,15 @@ func player_movement(delta):
 func play_anim(dir):
 	if state == PlayerState.IDLE:
 		$AnimatedSprite2D.play("idle")
-	if state == PlayerState.MOVING:
-		if dir.y == -1:
-			$AnimatedSprite2D.play("n-walk")
-		if dir.x == 1:
-			$AnimatedSprite2D.play("e-walk")
-		if dir.y == 1:
-			$AnimatedSprite2D.play("s-walk")
-		if dir.x == -1:
-			$AnimatedSprite2D.play("w-walk")
+	#if state == PlayerState.MOVING:
+		#if dir.y == -1:
+		#	$AnimatedSprite2D.play("n-walk")
+		#if dir.x == 1:
+		#	$AnimatedSprite2D.play("e-walk")
+		#if dir.y == 1:
+		#	$AnimatedSprite2D.play("s-walk")
+		#if dir.x == -1:
+		#	$AnimatedSprite2D.play("w-walk")
 			
 func player():
 	pass
@@ -70,6 +79,3 @@ func DialogicSignal(arg: String):
 		print("dialogue start ended")
 		is_chatting = false
 		state = PlayerState.IDLE
-
-	
-
