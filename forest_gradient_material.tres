@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cpjk0nwss2tro"]
+
+[ext_resource type="Shader" path="res://forest_base.gdshader" id="1_pvk3v"]
+[ext_resource type="Texture2D" uid="uid://bt5vpt38wg1re" path="res://forest_gradient.tres" id="2_hxivu"]
+
+[resource]
+shader = ExtResource("1_pvk3v")
+shader_parameter/mix_amount = 0.38
+shader_parameter/gradient = ExtResource("2_hxivu")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bus5t5h5p8vl3"
-path="res://.godot/imported/UI books & more.png-82765b000376024766b7fe85654a45b1.ctex"
+uid="uid://bxk4l2o1i7r48"
+path="res://.godot/imported/slime.png-2a7f07537ee9da0bab4bbee4ca9b8674.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI books & more.png"
-dest_files=["res://.godot/imported/UI books & more.png-82765b000376024766b7fe85654a45b1.ctex"]
+source_file="res://sprites/sprites/characters/slime.png"
+dest_files=["res://.godot/imported/slime.png-2a7f07537ee9da0bab4bbee4ca9b8674.ctex"]
 
 [params]
 

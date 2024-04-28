@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bus5t5h5p8vl3"
-path="res://.godot/imported/UI books & more.png-82765b000376024766b7fe85654a45b1.ctex"
+uid="uid://7obd4s03c5y1"
+path="res://.godot/imported/decor_16x16.png-55d7ccc8f1de7d3709b67a4767146146.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI books & more.png"
-dest_files=["res://.godot/imported/UI books & more.png-82765b000376024766b7fe85654a45b1.ctex"]
+source_file="res://sprites/sprites/tilesets/decor_16x16.png"
+dest_files=["res://.godot/imported/decor_16x16.png-55d7ccc8f1de7d3709b67a4767146146.ctex"]
 
 [params]
 

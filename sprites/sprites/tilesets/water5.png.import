@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bus5t5h5p8vl3"
-path="res://.godot/imported/UI books & more.png-82765b000376024766b7fe85654a45b1.ctex"
+uid="uid://g1u2301pv2ot"
+path="res://.godot/imported/water5.png-b4eae707423a46836732521db2db77be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI books & more.png"
-dest_files=["res://.godot/imported/UI books & more.png-82765b000376024766b7fe85654a45b1.ctex"]
+source_file="res://sprites/sprites/tilesets/water5.png"
+dest_files=["res://.godot/imported/water5.png-b4eae707423a46836732521db2db77be.ctex"]
 
 [params]
 
