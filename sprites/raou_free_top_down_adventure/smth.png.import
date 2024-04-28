@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bus5t5h5p8vl3"
-path="res://.godot/imported/UI books & more.png-82765b000376024766b7fe85654a45b1.ctex"
+uid="uid://bi44x64wl7r7r"
+path="res://.godot/imported/smth.png-f120908d05ce9147bd571906f443f738.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/UI books & more.png"
-dest_files=["res://.godot/imported/UI books & more.png-320fc11e1dbb3eb7c7be48e9db0f06cf.ctex"]
+source_file="res://sprites/raou_free_top_down_adventure/smth.png"
+dest_files=["res://.godot/imported/smth.png-f120908d05ce9147bd571906f443f738.ctex"]
 
 [params]
 

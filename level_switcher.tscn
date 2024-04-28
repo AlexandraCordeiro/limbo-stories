@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnsvwtin78ta1"]
+
+[ext_resource type="Script" path="res://LevelSwitcher.gd" id="1_dfabv"]
+[ext_resource type="PackedScene" uid="uid://hitwl0pvtdbw" path="res://forest_base.tscn" id="2_e6bb1"]
+
+[node name="LevelSwitcher" type="Node2D"]
+script = ExtResource("1_dfabv")
+
+[node name="Level" parent="." instance=ExtResource("2_e6bb1")]
+
+[connection signal="level_changed" from="Level" to="." method="_on_level_level_changed"]

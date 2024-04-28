@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://bpvwjn770s14k"]
+
+[ext_resource type="Shader" path="res://scene.gdshader" id="1_w34jd"]
+[ext_resource type="Texture2D" uid="uid://crwayo44t1y2d" path="res://opening_scene_gradient.tres" id="2_qciy6"]
+
+[resource]
+shader = ExtResource("1_w34jd")
+shader_parameter/mix_amount = 0.1
+shader_parameter/gradient = ExtResource("2_qciy6")

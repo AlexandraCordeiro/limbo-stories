@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bus5t5h5p8vl3"
-path="res://.godot/imported/UI books & more.png-82765b000376024766b7fe85654a45b1.ctex"
+uid="uid://xwdls6128f6d"
+path="res://.godot/imported/flooring.png-dd925e41a288191637e3770d63fd47f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/UI books & more.png"
-dest_files=["res://.godot/imported/UI books & more.png-320fc11e1dbb3eb7c7be48e9db0f06cf.ctex"]
+source_file="res://sprites/sprites/tilesets/floors/flooring.png"
+dest_files=["res://.godot/imported/flooring.png-dd925e41a288191637e3770d63fd47f8.ctex"]
 
 [params]
 
