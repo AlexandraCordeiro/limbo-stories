@@ -1,5 +1,6 @@
-[gd_scene load_steps=49 format=3 uid="uid://ddvji5e6ecxh"]
+[gd_scene load_steps=50 format=3 uid="uid://ddvji5e6ecxh"]
 
+[ext_resource type="Script" path="res://waterfall.gd" id="1_hsu0i"]
 [ext_resource type="Texture2D" uid="uid://deh5xam2w0cnp" path="res://sprites/WaterFall/WaterFall(Water).png" id="1_rrhe5"]
 [ext_resource type="TileSet" uid="uid://dbbrvhv24fajh" path="res://waterfall_tile_set.tres" id="2_ko614"]
 [ext_resource type="Script" path="res://main_character.gd" id="3_4eifh"]
@@ -307,6 +308,7 @@ radius = 5.75543
 
 [node name="Waterfall" type="Node2D"]
 scale = Vector2(4, 4)
+script = ExtResource("1_hsu0i")
 
 [node name="w1" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
