@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ndam2p3mu7pm"]
+[gd_scene load_steps=10 format=3 uid="uid://cukr04kh1bfkf"]
 
 [ext_resource type="TileSet" uid="uid://ct6sw08d4ado6" path="res://diary_tile_set.tres" id="1_ebxij"]
 [ext_resource type="FontFile" uid="uid://dvi1mrl7seh6x" path="res://fonts/ReenieBeanie-Regular.ttf" id="2_vxv5k"]
