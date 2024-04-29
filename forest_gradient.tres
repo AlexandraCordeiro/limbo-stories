@@ -1,7 +1,7 @@
 [gd_resource type="GradientTexture2D" load_steps=2 format=3 uid="uid://bt5vpt38wg1re"]
 
 [sub_resource type="Gradient" id="Gradient_wdjet"]
-colors = PackedColorArray(0.0188813, 0.246213, 0.398781, 1, 0.424474, 0.499195, 0, 1)
+colors = PackedColorArray(0, 0.662745, 0.321569, 1, 0, 0.347871, 0.204398, 1)
 
 [resource]
 gradient = SubResource("Gradient_wdjet")

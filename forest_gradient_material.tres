@@ -5,5 +5,5 @@
 
 [resource]
 shader = ExtResource("1_pvk3v")
-shader_parameter/mix_amount = 0.38
+shader_parameter/mix_amount = 0.1
 shader_parameter/gradient = ExtResource("2_hxivu")
