@@ -38,46 +38,38 @@ layer_8/name = "others"
 layer_8/tile_data = PackedInt32Array()
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
-offset_left = 40.5
-offset_top = 23.5
-offset_right = 2020.5
-offset_bottom = 1510.5
+offset_left = 44.0
+offset_top = 23.0
+offset_right = 1964.0
+offset_bottom = 2343.0
 scale = Vector2(0.05, 0.05)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("2_r2elv")
-theme_override_font_sizes/normal_font_size = 100
-text = "Do never be afraid of crossing this here forest, you see;
-For tremendous natural beauty lies deep beneath its trees.
+theme_override_font_sizes/normal_font_size = 94
+text = "Pay close attention,
+as any false step in your path
+To the entrance will seamlessly
+send you right back.
 
-The forest wilfully seeks to protect its beauty
-From the prying eyes of the greedy and the unworthy.
+When beds of roses stand before you,
+go where there are plenty.
+Bluebells are more subtle,
+not too little, not too many.
 
-Pay close attention, as any false step in your path
-To the entrance will seamlessly send you right back.
+The forest will walk us through
+all the whimsy and the blight,
+With blessings of guidance
+in the form of stars, under broad daylight.
 
-When beds of roses stand before you, go where there are plenty.
-Bluebells are more subtle; not too little, not too many."
+When the thicket's dense,
+and your surroundings give no clues,
+Stay vigilant to sounds
+that might scare and confuse.
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 152.5
-offset_top = 19.75
-offset_right = 2132.5
-offset_bottom = 1674.75
-scale = Vector2(0.05, 0.05)
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("2_r2elv")
-theme_override_font_sizes/normal_font_size = 100
-text = "
-The forest will walk us through all the whimsy and the blight,
-With blessings of guidance in the form of stars under broad daylight.
-
-
-When the thicket's dense, and your surroundings give no clues,
-Stay vigilant to sounds that might scare and confuse.
-
-
-And right before you find the beauty in the afterglow,
-Where the birds follow the wind is where you will go."
+And right before you find
+the beauty in the afterglow,
+Where the birds follow
+the wind is where you will go."
 
 [node name="Area2D" type="Area2D" parent="."]
 visible = false
