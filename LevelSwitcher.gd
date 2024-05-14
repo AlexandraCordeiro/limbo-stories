@@ -39,8 +39,3 @@ func _on_level_level_changed(level_type, load_zone, correct_zone):
 		current = new_scene
 	
 	
-	
-
-
-func _on_level_set_memory_challenge(star_type, correct_zone):
-	memory_challenge[star_type] = correct_zone
