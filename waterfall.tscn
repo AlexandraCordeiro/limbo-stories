@@ -1,7 +1,8 @@
-[gd_scene load_steps=49 format=3 uid="uid://ddvji5e6ecxh"]
+[gd_scene load_steps=50 format=3 uid="uid://ddvji5e6ecxh"]
 
+[ext_resource type="Script" path="res://waterfall.gd" id="1_c7k4h"]
 [ext_resource type="Texture2D" uid="uid://deh5xam2w0cnp" path="res://sprites/WaterFall/WaterFall(Water).png" id="1_rrhe5"]
-[ext_resource type="TileSet" uid="uid://dbbrvhv24fajh" path="res://waterfall_tile_set.tres" id="2_ko614"]
+[ext_resource type="TileSet" uid="uid://dnnkdbsk2oi2b" path="res://waterfall_tile_set.tres" id="2_ko614"]
 [ext_resource type="Script" path="res://main_character.gd" id="3_4eifh"]
 [ext_resource type="Texture2D" uid="uid://dp41uclk0muh" path="res://sprites/Blue_witch/B_witch_idle.png" id="4_m6rme"]
 [ext_resource type="Texture2D" uid="uid://bqai1v8q3bbea" path="res://sprites/Blue_witch/B_witch_run.png" id="5_gu5fa"]
@@ -307,6 +308,7 @@ radius = 5.75543
 
 [node name="Waterfall" type="Node2D"]
 scale = Vector2(4, 4)
+script = ExtResource("1_c7k4h")
 
 [node name="w1" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

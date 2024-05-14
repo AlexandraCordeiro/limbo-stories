@@ -26,4 +26,4 @@ func _process(_delta):
 func _change_scene():
 	scene_changed = true
 	global.read_mode = true
-	get_tree().change_scene_to_file("res://first_entry.tscn")
+	get_tree().change_scene_to_file("res://poem.tscn")

@@ -843,7 +843,8 @@ position = Vector2(139.25, 46)
 [node name="BirdAudio" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(29.75, 61.75)
 stream = ExtResource("27_bmuqc")
-max_distance = 127.0
+max_distance = 250.0
+attenuation = 2.0
 
 [node name="BranchesAudio1" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(245, 60.75)
@@ -854,14 +855,20 @@ attenuation = 2.0
 [node name="BranchesAudio2" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(34.5, -10.75)
 stream = ExtResource("29_7qf0d")
+max_distance = 500.0
+attenuation = 2.0
 
 [node name="BushesAudio1" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(140, 20)
 stream = ExtResource("30_2pw6v")
+max_distance = 500.0
+attenuation = 2.0
 
 [node name="BushesAudio2" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(53.5, 2.5)
 stream = ExtResource("31_m48nt")
+max_distance = 500.0
+attenuation = 2.0
 
 [node name="ColorRect3" type="ColorRect" parent="."]
 z_index = 1

@@ -12,7 +12,6 @@ script = ExtResource("1_yjb8o")
 [node name="Star" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.2, 0.2)
 sprite_frames = ExtResource("2_c0hr4")
-frame_progress = 1.0
 
 [node name="Area2D" type="Area2D" parent="."]
 
