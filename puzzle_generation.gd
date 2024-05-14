@@ -49,7 +49,7 @@ func _ready():
 	level_type = aux;
 	print("oi!")
 	
-	var level_number = get_parent().level_number
+	var level_number = global.level_number
 	
 	match level_number:
 		0:
@@ -101,20 +101,20 @@ func gen_audio_puzzle():
 	
 func gen_memory_puzzle():
 	var star_type = rng.randi_range(0, 1)
-	var memorized = get_parent().memory_challenge
 	
-	if memorized[star_type] == -2:
+	if global.memory_challenge[star_type] == -2:
 		star_type = (star_type + 1) % 2
 		
-	if memorized[star_type] == -1:
-		set_memory_challenge.emit(star_type, correct_zone)
+	if global.memory_challenge[star_type] == -1:
+		global.memory_challenge[star_type] = correct_zone
 		
 		for i in range(3):
 			if i == correct_zone:
 				continue
 			tilemap.set_cell(1, LOADZONES_POS_ARRAY[i], 5, Vector2i(1, 5))
 	else:
-		set_memory_challenge.emit(star_type, -2)
+		correct_zone = global.memory_challenge[star_type]
+		global.memory_challenge[star_type] = -2
 		
 		for i in range(3):
 			tilemap.set_cell(1, LOADZONES_POS_ARRAY[i], -1)
@@ -129,12 +129,12 @@ func gen_memory_puzzle():
 
 func gen_flowerbed_puzzle():
 	var color = rng.randi_range(0, 1)
-	correct_zone = random[color]
+	correct_zone = random[1 - color]
 	var flowerbed_id = 15 + color
 	
-	tilemap.set_cell(3, FLOWERBED_POS_ARRAY[random[color]], flowerbed_id, Vector2i(0, 0))
-	tilemap.set_cell(3, FLOWERBED_POS_ARRAY[random[color + 1]], flowerbed_id - 2, Vector2i(0, 0))
-	tilemap.set_cell(3, FLOWERBED_POS_ARRAY[random[(color + 2) % 3]], flowerbed_id - 4, Vector2i(0, 0))
+	tilemap.set_cell(3, FLOWERBED_POS_ARRAY[random[0]], flowerbed_id, Vector2i(0, 0))
+	tilemap.set_cell(3, FLOWERBED_POS_ARRAY[random[1]], flowerbed_id - 2, Vector2i(0, 0))
+	tilemap.set_cell(3, FLOWERBED_POS_ARRAY[random[2]], flowerbed_id - 4, Vector2i(0, 0))
 	
 	tilemap.set_layer_enabled(3, true)
 	

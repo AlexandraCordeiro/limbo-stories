@@ -1,0 +1,99 @@
+[gd_scene load_steps=6 format=3 uid="uid://bwf8d0ihk67l8"]
+
+[ext_resource type="TileSet" uid="uid://ct6sw08d4ado6" path="res://diary_tile_set.tres" id="1_270ab"]
+[ext_resource type="FontFile" uid="uid://dvi1mrl7seh6x" path="res://fonts/ReenieBeanie-Regular.ttf" id="2_r2elv"]
+[ext_resource type="Script" path="res://close_button.gd" id="3_h8yo5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r6dio"]
+radius = 10.7616
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6t1o5"]
+radius = 8.34416
+
+[node name="Poem" type="Node2D"]
+scale = Vector2(4, 4)
+
+[node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
+rotation = 0.000828615
+tile_set = ExtResource("1_270ab")
+format = 2
+layer_0/name = "table"
+layer_0/tile_data = PackedInt32Array(16, 3407887, 0, 65552, 3407887, 1, 17, 3473423, 0, 65553, 3473423, 1)
+layer_1/name = "other_elements"
+layer_1/tile_data = PackedInt32Array(458759, 1441800, 8)
+layer_2/name = "diary"
+layer_2/tile_data = PackedInt32Array(65545, 2097160, 1, 131081, 2097160, 2, 196617, 2097160, 3, 262153, 2097160, 2, 327689, 2097160, 3, 393225, 2097160, 2, 458761, 2097160, 2, 524297, 2097160, 4, 65546, 2162696, 1, 131082, 2162696, 2, 196618, 2162696, 2, 262154, 2162696, 3, 327690, 2162696, 2, 393226, 2162696, 2, 458762, 2162696, 2, 524298, 2162696, 4, 65547, 2162696, 1, 131083, 2162696, 2, 196619, 2162696, 2, 262155, 2162696, 3, 327691, 2162696, 2, 393227, 2162696, 2, 458763, 2162696, 2, 524299, 2162696, 4, 65548, 2162696, 1, 131084, 2162696, 2, 196620, 2162696, 2, 262156, 2162696, 3, 327692, 2162696, 2, 393228, 2162696, 2, 458764, 2162696, 2, 524300, 2162696, 4, 65549, 2162696, 1, 131085, 2162696, 2, 196621, 2162696, 2, 262157, 2162696, 3, 327693, 2162696, 2, 393229, 2162696, 2, 458765, 2162696, 2, 524301, 2162696, 4, 65550, 2162696, 1, 131086, 2162696, 2, 196622, 2162696, 2, 262158, 2162696, 3, 327694, 2162696, 2, 393230, 2162696, 2, 458766, 2162696, 2, 524302, 2162696, 4, 65551, 2228232, 1, 131087, 2228232, 2, 196623, 2228232, 3, 262159, 2228232, 3, 327695, 2228232, 2, 393231, 2228232, 3, 458767, 2228232, 3, 524303, 2228232, 4, 65538, 2097160, 1, 131074, 2097160, 2, 196610, 2097160, 3, 262146, 2097160, 2, 327682, 2097160, 3, 393218, 2097160, 2, 458754, 2097160, 2, 524290, 2097160, 4, 65539, 2162696, 1, 131075, 2162696, 2, 196611, 2162696, 2, 262147, 2162696, 3, 327683, 2162696, 2, 393219, 2162696, 2, 458755, 2162696, 2, 524291, 2162696, 4, 65540, 2162696, 1, 131076, 2162696, 2, 196612, 2162696, 2, 262148, 2162696, 3, 327684, 2162696, 2, 393220, 2162696, 2, 458756, 2162696, 2, 524292, 2162696, 4, 65541, 2162696, 1, 131077, 2162696, 2, 196613, 2162696, 2, 262149, 2162696, 3, 327685, 2162696, 2, 393221, 2162696, 2, 458757, 2162696, 2, 524293, 2162696, 4, 65542, 2162696, 1, 131078, 2162696, 2, 196614, 2162696, 2, 262150, 2162696, 3, 327686, 2162696, 2, 393222, 2162696, 2, 458758, 2162696, 2, 524294, 2162696, 4, 65543, 2162696, 1, 131079, 2162696, 2, 196615, 2162696, 2, 262151, 2162696, 3, 327687, 2162696, 2, 393223, 2162696, 2, 458759, 2162696, 2, 524295, 2162696, 4, 65544, 2228232, 1, 131080, 2228232, 2, 196616, 2228232, 3, 262152, 2228232, 3, 327688, 2228232, 2, 393224, 2228232, 3, 458760, 2228232, 3, 524296, 2228232, 4)
+layer_3/name = "writing"
+layer_3/tile_data = PackedInt32Array()
+layer_4/name = "photo"
+layer_4/tile_data = PackedInt32Array()
+layer_5/name = "alex"
+layer_5/tile_data = PackedInt32Array()
+layer_6/name = "ui"
+layer_6/tile_data = PackedInt32Array()
+layer_7/name = "poem"
+layer_7/tile_data = PackedInt32Array()
+layer_8/name = "others"
+layer_8/tile_data = PackedInt32Array()
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 40.5
+offset_top = 23.5
+offset_right = 2020.5
+offset_bottom = 1510.5
+scale = Vector2(0.05, 0.05)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_r2elv")
+theme_override_font_sizes/normal_font_size = 100
+text = "Do never be afraid of crossing this here forest, you see;
+For tremendous natural beauty lies deep beneath its trees.
+
+The forest wilfully seeks to protect its beauty
+From the prying eyes of the greedy and the unworthy.
+
+Pay close attention, as any false step in your path
+To the entrance will seamlessly send you right back.
+
+When beds of roses stand before you, go where there are plenty.
+Bluebells are more subtle; not too little, not too many."
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 152.5
+offset_top = 19.75
+offset_right = 2132.5
+offset_bottom = 1674.75
+scale = Vector2(0.05, 0.05)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_r2elv")
+theme_override_font_sizes/normal_font_size = 100
+text = "
+The forest will walk us through all the whimsy and the blight,
+With blessings of guidance in the form of stars under broad daylight.
+
+
+When the thicket's dense, and your surroundings give no clues,
+Stay vigilant to sounds that might scare and confuse.
+
+
+And right before you find the beauty in the afterglow,
+Where the birds follow the wind is where you will go."
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+position = Vector2(272, 14.5)
+script = ExtResource("3_h8yo5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.25, 0.25)
+shape = SubResource("CircleShape2D_r6dio")
+
+[node name="closeDiaryButton" type="Area2D" parent="."]
+script = ExtResource("3_h8yo5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="closeDiaryButton"]
+position = Vector2(271.75, 14.5)
+shape = SubResource("CircleShape2D_6t1o5")
+
+[connection signal="input_event" from="Area2D" to="Area2D" method="_on_input_event"]
+[connection signal="input_event" from="closeDiaryButton" to="closeDiaryButton" method="_on_input_event"]
