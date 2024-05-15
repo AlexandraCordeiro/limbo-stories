@@ -3817,6 +3817,25 @@ shape = SubResource("CircleShape2D_uirn3")
 position = Vector2(-33, -144)
 anchor_mode = 0
 
+[node name="poem" type="Area2D" parent="."]
+position = Vector2(33, 144)
+script = ExtResource("23_1q7dr")
+
+[node name="Sprite2D" type="Sprite2D" parent="poem"]
+texture_filter = 1
+position = Vector2(0.249989, -1.52588e-05)
+scale = Vector2(0.484375, 0.484375)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="poem"]
+position = Vector2(0.5, 0.25)
+shape = SubResource("CircleShape2D_uirn3")
+
+[node name="Camera2D" type="Camera2D" parent="poem"]
+position = Vector2(-33, -144)
+anchor_mode = 0
+
 [connection signal="input_event" from="CharacterBody2D/Camera2DPlayer/inventory" to="CharacterBody2D/Camera2DPlayer/inventory" method="_on_input_event"]
 [connection signal="body_entered" from="diary" to="diary" method="_on_body_entered"]
 [connection signal="body_exited" from="diary" to="diary" method="_on_body_exited"]
+[connection signal="body_entered" from="poem" to="poem" method="_on_body_entered"]
+[connection signal="body_exited" from="poem" to="poem" method="_on_body_exited"]
