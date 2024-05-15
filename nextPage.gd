@@ -21,6 +21,7 @@ func _on_input_event(viewport, event, shape_idx):
 			var key = keys[i]
 			print("Key:", key)
 			if key == current_page and i < keys.size() - 1:
+				print("*****")
 				var next_page = global.diary_entries[keys[i + 1]]
 				print("Next Page:", next_page)
 				if next_page:
