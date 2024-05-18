@@ -7,6 +7,7 @@
 script = ExtResource("1_dfabv")
 
 [node name="Level" parent="." instance=ExtResource("2_e6bb1")]
+position = Vector2(-525, -290)
 
 [connection signal="level_changed" from="Level" to="." method="_on_level_level_changed"]
 [connection signal="set_memory_challenge" from="Level" to="." method="_on_level_set_memory_challenge"]

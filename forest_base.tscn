@@ -1,9 +1,11 @@
-[gd_scene load_steps=73 format=3 uid="uid://hitwl0pvtdbw"]
+[gd_scene load_steps=76 format=3 uid="uid://hitwl0pvtdbw"]
 
 [ext_resource type="Texture2D" uid="uid://ct5sm0mqttykx" path="res://sprites/sprites/tilesets/grass.png" id="1_pqy6k"]
 [ext_resource type="Material" uid="uid://cpjk0nwss2tro" path="res://forest_gradient_material.tres" id="1_rllir"]
 [ext_resource type="Script" path="res://puzzle_generation.gd" id="2_i8wq7"]
 [ext_resource type="Texture2D" uid="uid://bk8s182kbbae4" path="res://sprites/sprites/tilesets/decor_8x8.png" id="2_xbskp"]
+[ext_resource type="Script" path="res://inventory-v2.gd" id="3_rcrwq"]
+[ext_resource type="TileSet" uid="uid://cxwing6fjf2gh" path="res://tileset_inventory.tres" id="4_yrbuo"]
 [ext_resource type="Texture2D" uid="uid://dqrershukh5rc" path="res://sprites/raou_free_top_down_adventure/topDown_baseTiles.png" id="5_hwthj"]
 [ext_resource type="Texture2D" uid="uid://bv03ur6try0rt" path="res://sprites/raou_free_top_down_adventure/pokemon_forest.png" id="5_pv4gp"]
 [ext_resource type="Texture2D" uid="uid://bi44x64wl7r7r" path="res://sprites/raou_free_top_down_adventure/smth.png" id="6_iulcj"]
@@ -34,6 +36,9 @@
 [ext_resource type="Shader" path="res://god_ray.gdshader" id="32_fxh1o"]
 [ext_resource type="PackedScene" uid="uid://du6cppj0sr14f" path="res://sfx/star_animator.tscn" id="33_dmd2l"]
 [ext_resource type="PackedScene" uid="uid://c6v10c41hjvlg" path="res://star_animator_2.tscn" id="34_bi7oi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c2lyj"]
+radius = 7.07107
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l16xs"]
 shader = ExtResource("14_m5hlj")
@@ -752,6 +757,20 @@ position = Vector2(-523, -309)
 scale = Vector2(4, 4)
 script = ExtResource("2_i8wq7")
 
+[node name="inventory" type="Area2D" parent="."]
+visible = false
+script = ExtResource("3_rcrwq")
+
+[node name="TileMap" type="TileMap" parent="inventory"]
+scale = Vector2(0.5, 0.5)
+tile_set = ExtResource("4_yrbuo")
+format = 2
+layer_0/tile_data = PackedInt32Array(327682, 2097153, 13)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inventory"]
+position = Vector2(20.25, 43.75)
+shape = SubResource("CircleShape2D_c2lyj")
+
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = 1
 material = SubResource("ShaderMaterial_l16xs")
@@ -896,6 +915,7 @@ position = Vector2(132.5, 69.75)
 visible = false
 position = Vector2(132.75, 69.5)
 
+[connection signal="input_event" from="inventory" to="inventory" method="_on_input_event"]
 [connection signal="load_zone_entered" from="LeftZone" to="." method="_on_left_zone_load_zone_entered"]
 [connection signal="load_zone_entered" from="TopZone" to="." method="_on_top_zone_load_zone_entered"]
 [connection signal="load_zone_entered" from="RightZone" to="." method="_on_right_zone_load_zone_entered"]
