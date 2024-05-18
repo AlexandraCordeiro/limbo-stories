@@ -2,13 +2,16 @@ extends Area2D
 
 var entered = false
 var scene_changed = false
-
+var collision_shape
+func _ready():
+	collision_shape = get_node("CollisionShape2D")
+	
 func _on_body_entered(body):
 	if body is Player:
 		entered = true
 		scene_changed = true
 		global.read_mode = true
-		get_tree().change_scene_to_file("res://first_entry.tscn")
+		get_tree().change_scene_to_file(global.first_entry_dir)
 		# print("entered\n")
 
 func _on_body_exited(body):

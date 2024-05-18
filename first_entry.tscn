@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://bq0jk155op4bq"]
+[gd_scene load_steps=11 format=3 uid="uid://cct75v2er2a6x"]
 
 [ext_resource type="TileSet" uid="uid://ct6sw08d4ado6" path="res://diary_tile_set.tres" id="1_ebxij"]
 [ext_resource type="FontFile" uid="uid://dvi1mrl7seh6x" path="res://fonts/ReenieBeanie-Regular.ttf" id="2_vxv5k"]
 [ext_resource type="Script" path="res://close_button.gd" id="3_u8t63"]
 [ext_resource type="Script" path="res://nextPage.gd" id="4_73hat"]
 [ext_resource type="Texture2D" uid="uid://ch0mau7q2ldkt" path="res://sprites/Pixel Paper v1.0/1 Sprites/Sprites/Design/Buttons & Holders/59.png" id="5_orr6g"]
+[ext_resource type="Script" path="res://previousPage.gd" id="6_fjnjj"]
 
 [sub_resource type="GDScript" id="GDScript_5ydsr"]
 script/source = "extends Node2D
@@ -17,6 +18,10 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+
+func _on_previous_page_input_event(viewport, event, shape_idx):
+	pass # Replace with function body.
 "
 
 [sub_resource type="GDScript" id="GDScript_68q3d"]
@@ -101,6 +106,7 @@ position = Vector2(261.5, 87.5)
 shape = SubResource("CircleShape2D_qx8eq")
 
 [node name="previousPage" type="Area2D" parent="."]
+script = ExtResource("6_fjnjj")
 
 [node name="Sprite2D" type="Sprite2D" parent="previousPage"]
 texture_filter = 1
@@ -115,3 +121,5 @@ shape = SubResource("CircleShape2D_qx8eq")
 
 [connection signal="input_event" from="closeDiaryButton" to="closeDiaryButton" method="_on_input_event"]
 [connection signal="input_event" from="nextPage" to="nextPage" method="_on_input_event"]
+[connection signal="input_event" from="previousPage" to="." method="_on_previous_page_input_event"]
+[connection signal="input_event" from="previousPage" to="previousPage" method="_on_input_event"]
