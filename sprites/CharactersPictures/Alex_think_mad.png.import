@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct2kt3tc6n653"
-path="res://.godot/imported/Alex_think.png-53e0be710b07b01ccba83db34dfab2fb.ctex"
+uid="uid://bgix7enuqghym"
+path="res://.godot/imported/Alex_think_mad.png-8327d2903b876093fb8d3493a9f117ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/CharactersPictures/Alex_think.png"
-dest_files=["res://.godot/imported/Alex_think.png-53e0be710b07b01ccba83db34dfab2fb.ctex"]
+source_file="res://sprites/CharactersPictures/Alex_think_mad.png"
+dest_files=["res://.godot/imported/Alex_think_mad.png-8327d2903b876093fb8d3493a9f117ae.ctex"]
 
 [params]
 

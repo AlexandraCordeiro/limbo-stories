@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct2kt3tc6n653"
-path="res://.godot/imported/Alex_think.png-53e0be710b07b01ccba83db34dfab2fb.ctex"
+uid="uid://b263xq2tr8ut6"
+path="res://.godot/imported/grand_serious.png-2133cc084fa10d439f24b8c26008121f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/CharactersPictures/Alex_think.png"
-dest_files=["res://.godot/imported/Alex_think.png-53e0be710b07b01ccba83db34dfab2fb.ctex"]
+source_file="res://sprites/CharactersPictures/grand_serious.png"
+dest_files=["res://.godot/imported/grand_serious.png-2133cc084fa10d439f24b8c26008121f.ctex"]
 
 [params]
 
