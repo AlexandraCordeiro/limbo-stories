@@ -20,17 +20,21 @@ func _ready():
 	Dialogic.signal_event.connect(DialogicSignal)
 	print(global.position_find_diary)
 	if global.enteredLevel:
-			position = Vector2(131.75, 112)
-			global.enteredLevel = false
-	if global.waterfall:
-			position = Vector2(25.25, 62.75)
-			global.waterfall = false
+		print("Dentro if enteredLevel")
+		position = Vector2(131.75, 112)
+		return
+	if global.waterfallLevel:
+		print("Dentro if waterfall")
+		position = Vector2(25.25, 62.75)
+		return
 	if global.position_find_diary.has("player") and global.positionFirstScene:
 		# Set the player position to the position stored in global.position_find_diary
+		print("Update position diary/inventory")
 		position = global.position_find_diary["player"]
 		global.positionFirstScene = false
+		return
 	else:
-		print("error position")
+		print("error position diary/inventory")
 
 func _process(delta):
 	if global.diary_was_found and global.fist_time_scene_principal:

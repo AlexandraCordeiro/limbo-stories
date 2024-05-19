@@ -18,6 +18,7 @@ func _on_level_level_changed(level_type, load_zone, correct_zone):
 		var new_scene
 		
 		if global.level_number > 7:
+			global.enteredLevel = false
 			new_scene = load("res://waterfall.tscn").instantiate()
 		else:
 			new_scene = load("res://forest_base.tscn").instantiate()

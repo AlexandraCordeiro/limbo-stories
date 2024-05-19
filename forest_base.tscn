@@ -816,7 +816,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fku8g"]
-radius = 4.0
+radius = 2.25
 
 [node name="Level" type="Node2D"]
 y_sort_enabled = true
@@ -956,13 +956,13 @@ script = ExtResource("6_rv8o1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D2"]
 texture_filter = 1
-position = Vector2(1.90735e-06, -4.76837e-07)
-scale = Vector2(0.53418, 0.53418)
+position = Vector2(2.98023e-08, -1.66893e-06)
+scale = Vector2(0.341878, 0.341878)
 sprite_frames = SubResource("SpriteFrames_i8elu")
 animation = &"idle_boy"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
-position = Vector2(-0.5, 6)
+position = Vector2(0, 4)
 shape = SubResource("CircleShape2D_fku8g")
 debug_color = Color(0.403922, 0.466667, 1, 0.419608)
 
