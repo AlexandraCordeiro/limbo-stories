@@ -18,9 +18,9 @@ var state = PlayerState.DIALOGUE
 
 func _ready():
 	Dialogic.signal_event.connect(DialogicSignal)
-	#if global.position_find_diary.has("player"):
+	if global.position_find_diary.has("player"):
 		# Set the player position to the position stored in global.position_find_diary
-		#position = global.position_find_diary["player"]
+		position = global.position_find_diary["player"]
 
 func _process(delta):
 	if global.diary_was_found and global.fist_time_scene_principal:
