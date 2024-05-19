@@ -27,4 +27,4 @@ func _process(_delta):
 
 func _change_scene():
 	global.read_mode = true
-	get_tree().change_scene_to_file(global.first_entry_dir)
+	get_tree().change_scene_to_file(global.cover_dir)

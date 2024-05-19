@@ -1,7 +1,7 @@
-[gd_scene load_steps=83 format=3 uid="uid://hitwl0pvtdbw"]
+[gd_scene load_steps=86 format=3 uid="uid://hitwl0pvtdbw"]
 
 [ext_resource type="Texture2D" uid="uid://ct5sm0mqttykx" path="res://sprites/sprites/tilesets/grass.png" id="1_pqy6k"]
-[ext_resource type="Material" path="res://forest_gradient_material.tres" id="1_rllir"]
+[ext_resource type="Material" uid="uid://cpjk0nwss2tro" path="res://forest_gradient_material.tres" id="1_rllir"]
 [ext_resource type="Script" path="res://puzzle_generation.gd" id="2_i8wq7"]
 [ext_resource type="Texture2D" uid="uid://bk8s182kbbae4" path="res://sprites/sprites/tilesets/decor_8x8.png" id="2_xbskp"]
 [ext_resource type="Texture2D" uid="uid://dqrershukh5rc" path="res://sprites/raou_free_top_down_adventure/topDown_baseTiles.png" id="5_hwthj"]
@@ -39,6 +39,8 @@
 [ext_resource type="PackedScene" uid="uid://du6cppj0sr14f" path="res://sfx/star_animator.tscn" id="33_dmd2l"]
 [ext_resource type="Texture2D" uid="uid://c52t50qtedakd" path="res://sprites/Character2D/022.png" id="33_mx5qn"]
 [ext_resource type="PackedScene" uid="uid://c6v10c41hjvlg" path="res://star_animator_2.tscn" id="34_bi7oi"]
+[ext_resource type="Script" path="res://inventory.gd" id="39_uhesm"]
+[ext_resource type="TileSet" uid="uid://c6d5yufp5tdyg" path="res://tileset_inventory.tres" id="40_ntueq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l16xs"]
 shader = ExtResource("14_m5hlj")
@@ -684,6 +686,9 @@ shader_parameter/color = Vector4(1, 0.9, 0.65, 0.8)
 shader_parameter/hdr = false
 shader_parameter/seed = 5.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_3gili"]
+radius = 6.255
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_dhn0k"]
 atlas = ExtResource("33_mx5qn")
 region = Rect2(21, 0, 18, 32)
@@ -954,6 +959,25 @@ script = ExtResource("6_rv8o1")
 
 [node name="Camera2DPlayer" type="Camera2D" parent="CharacterBody2D2"]
 
+[node name="inventory" type="Area2D" parent="CharacterBody2D2/Camera2DPlayer"]
+position = Vector2(-39, -36.25)
+script = ExtResource("39_uhesm")
+
+[node name="TileMap" type="TileMap" parent="CharacterBody2D2/Camera2DPlayer/inventory"]
+texture_filter = 1
+position = Vector2(-105.25, -45)
+scale = Vector2(0.5, 0.5)
+tile_set = ExtResource("40_ntueq")
+format = 2
+layer_0/name = "box"
+layer_0/tile_data = PackedInt32Array(65536, 2097153, 11)
+layer_1/name = "diary"
+layer_1/tile_data = PackedInt32Array()
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2/Camera2DPlayer/inventory"]
+position = Vector2(-101.5, -32.75)
+shape = SubResource("CircleShape2D_3gili")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D2"]
 texture_filter = 1
 position = Vector2(2.98023e-08, -1.66893e-06)
@@ -969,3 +993,4 @@ debug_color = Color(0.403922, 0.466667, 1, 0.419608)
 [connection signal="load_zone_entered" from="LeftZone" to="." method="_on_left_zone_load_zone_entered"]
 [connection signal="load_zone_entered" from="TopZone" to="." method="_on_top_zone_load_zone_entered"]
 [connection signal="load_zone_entered" from="RightZone" to="." method="_on_right_zone_load_zone_entered"]
+[connection signal="input_event" from="CharacterBody2D2/Camera2DPlayer/inventory" to="CharacterBody2D2/Camera2DPlayer/inventory" method="_on_input_event"]
