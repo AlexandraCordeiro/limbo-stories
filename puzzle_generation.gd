@@ -132,9 +132,9 @@ func gen_flowerbed_puzzle():
 	correct_zone = random[1 - color]
 	var flowerbed_id = 15 + color
 	
-	tilemap.set_cell(3, FLOWERBED_POS_ARRAY[random[0]], flowerbed_id, Vector2i(0, 0))
-	tilemap.set_cell(3, FLOWERBED_POS_ARRAY[random[1]], flowerbed_id - 2, Vector2i(0, 0))
-	tilemap.set_cell(3, FLOWERBED_POS_ARRAY[random[2]], flowerbed_id - 4, Vector2i(0, 0))
+	tilemap.set_cell(3, FLOWERBED_POS_ARRAY[random[0]], flowerbed_id, Vector2i(1, 2))
+	tilemap.set_cell(3, FLOWERBED_POS_ARRAY[random[1]], flowerbed_id - 2, Vector2i(1, 2))
+	tilemap.set_cell(3, FLOWERBED_POS_ARRAY[random[2]], flowerbed_id - 4, Vector2i(1, 2))
 	
 	tilemap.set_layer_enabled(3, true)
 	

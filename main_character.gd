@@ -18,13 +18,23 @@ var state = PlayerState.DIALOGUE
 
 func _ready():
 	Dialogic.signal_event.connect(DialogicSignal)
-	if global.position_find_diary.has("player"):
+	print(global.position_find_diary)
+	if global.enteredLevel:
+			position = Vector2(131.75, 112)
+			global.enteredLevel = false
+	if global.waterfall:
+			position = Vector2(25.25, 62.75)
+			global.waterfall = false
+	if global.position_find_diary.has("player") and global.positionFirstScene:
 		# Set the player position to the position stored in global.position_find_diary
 		position = global.position_find_diary["player"]
+		global.positionFirstScene = false
+	else:
+		print("error position")
 
 func _process(delta):
 	if global.diary_was_found and global.fist_time_scene_principal:
-		global.diary_found(position)
+		#global.diary_found(position)
 		global.fist_time_scene_principal = false
 		state = PlayerState.DIALOGUE
 		

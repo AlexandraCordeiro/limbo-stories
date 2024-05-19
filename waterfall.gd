@@ -9,6 +9,7 @@ func _ready():
 	$w5.play()
 	$w2.play()
 	$waterfall.play()
+	global.waterfall = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
