@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://bnjuvaqkhbvft"]
+[gd_scene load_steps=65 format=3 uid="uid://bnjuvaqkhbvft"]
 
 [ext_resource type="Texture2D" uid="uid://f6ewpclyghm7" path="res://sprites/sprout_lands_pack/Tilesets/Fences.png" id="1_ws8ki"]
 [ext_resource type="Texture2D" uid="uid://qgdy8p7amj5f" path="res://sprites/sprout_lands_pack/Tilesets/Grass.png" id="2_ti8ag"]
@@ -19,8 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://couyfbu1dtxf6" path="res://sprites/sprout_lands_pack/Objects/Wood_Bridge.png" id="15_bjrwb"]
 [ext_resource type="Texture2D" uid="uid://4y2i4m50g5lp" path="res://sprites/sprout_lands_pack/Objects/Basic_tools_and_meterials.png" id="16_mv120"]
 [ext_resource type="Script" path="res://main_character.gd" id="20_qsf63"]
-[ext_resource type="Texture2D" uid="uid://c52t50qtedakd" path="res://sprites/Character2D/022.png" id="21_hi0p6"]
 [ext_resource type="TileSet" uid="uid://cxwing6fjf2gh" path="res://tileset_inventory.tres" id="21_147ri"]
+[ext_resource type="Texture2D" uid="uid://c52t50qtedakd" path="res://sprites/Character2D/022.png" id="21_hi0p6"]
 [ext_resource type="Script" path="res://detects_diary_collision.gd" id="23_1q7dr"]
 [ext_resource type="Texture2D" uid="uid://b0o6nj218r5fc" path="res://sprites/Free Paper UI System/1 Sprites/Content/1 Items/1.png" id="23_2gv7b"]
 [ext_resource type="Script" path="res://inventory.gd" id="24_yu5ds"]
@@ -2801,9 +2801,6 @@ sources/18 = SubResource("TileSetAtlasSource_l22m7")
 [sub_resource type="CircleShape2D" id="CircleShape2D_ieoq4"]
 radius = 6.255
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yy1kp"]
-atlas = ExtResource("20_vfxvt")
-region = Rect2(0, 0, 32, 48)
 [sub_resource type="AtlasTexture" id="AtlasTexture_dhn0k"]
 atlas = ExtResource("21_hi0p6")
 region = Rect2(21, 0, 18, 32)

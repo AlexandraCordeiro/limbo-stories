@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ct2kt3tc6n653"
-path="res://.godot/imported/Alex_think.png-53e0be710b07b01ccba83db34dfab2fb.ctex"
+path="res://.godot/imported/alex_think.png-e07cc36db0e9a358f0a915440853d3f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/CharactersPictures/Alex_think.png"
-dest_files=["res://.godot/imported/Alex_think.png-53e0be710b07b01ccba83db34dfab2fb.ctex"]
+source_file="res://sprites/CharactersPictures/alex_think.png"
+dest_files=["res://.godot/imported/alex_think.png-e07cc36db0e9a358f0a915440853d3f0.ctex"]
 
 [params]
 
