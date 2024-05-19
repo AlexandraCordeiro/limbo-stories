@@ -15,9 +15,36 @@
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
+"Happy": {
+"export_overrides": {
+"image": "\"res://sprites/CharactersPictures/Alex_happy.png\""
+},
+"mirror": false,
+"offset": Vector2(80, -160),
+"scale": 0.2,
+"scene": ""
+},
+"Mad": {
+"export_overrides": {
+"image": "\"res://sprites/CharactersPictures/Alex_think_mad.png\""
+},
+"mirror": false,
+"offset": Vector2(80, -160),
+"scale": 0.2,
+"scene": ""
+},
+"Surprise": {
+"export_overrides": {
+"image": "\"res://sprites/CharactersPictures/Alex_surprise.png\""
+},
+"mirror": false,
+"offset": Vector2(80, -160),
+"scale": 0.2,
+"scene": ""
+},
 "Think": {
 "export_overrides": {
-"image": "\"res://sprites/CharactersPictures/alex_think.png\""
+"image": "\"res://sprites/CharactersPictures/Alex_think.png\""
 },
 "mirror": false,
 "offset": Vector2(80, -160),

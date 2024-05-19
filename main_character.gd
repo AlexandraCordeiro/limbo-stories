@@ -55,16 +55,16 @@ func player_movement(delta):
 	
 func play_anim(dir):
 	if state == PlayerState.IDLE:
-		$AnimatedSprite2D.play("idle")
-	#if state == PlayerState.MOVING:
-		#if dir.y == -1:
-		#	$AnimatedSprite2D.play("n-walk")
-		#if dir.x == 1:
-		#	$AnimatedSprite2D.play("e-walk")
-		#if dir.y == 1:
-		#	$AnimatedSprite2D.play("s-walk")
-		#if dir.x == -1:
-		#	$AnimatedSprite2D.play("w-walk")
+		$AnimatedSprite2D.play("idle_boy")
+	if state == PlayerState.MOVING:
+		if dir.y == -1:
+			$AnimatedSprite2D.play("run_up")
+		if dir.x == 1:
+			$AnimatedSprite2D.play("run_right")
+		if dir.y == 1:
+			$AnimatedSprite2D.play("run_down")
+		if dir.x == -1:
+			$AnimatedSprite2D.play("run_left")
 			
 func player():
 	pass
