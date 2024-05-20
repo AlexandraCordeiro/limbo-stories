@@ -8,7 +8,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if global.read_mode:
+	if global.read_mode_poem:
 		self.visible = true
 	else:
 		self.visible = false

@@ -6,12 +6,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if global.read_mode:
+	if global.read_mode_diary:
 		self.visible = true
 	else:
 		self.visible = false
 
-func _on_input_event(viewport, event, shape_idx):
+func _on_input_event(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == 1:    # button left == 1
 		var current_page = get_tree().current_scene.name
 		print("Current Page:", current_page)
