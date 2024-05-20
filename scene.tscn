@@ -2933,7 +2933,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8tgk8"]
-radius = 4.0
+radius = 3.5
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uirn3"]
 radius = 5.75543
@@ -2990,12 +2990,12 @@ shape = SubResource("CircleShape2D_ieoq4")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 texture_filter = 1
 position = Vector2(1.90735e-06, -4.76837e-07)
-scale = Vector2(0.53418, 0.53418)
+scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_lcp6p")
 animation = &"idle_boy"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(-0.5, 6)
+position = Vector2(0, 5.75)
 shape = SubResource("CircleShape2D_8tgk8")
 debug_color = Color(0.403922, 0.466667, 1, 0.419608)
 

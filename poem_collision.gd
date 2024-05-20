@@ -5,7 +5,7 @@ const POEM_HEIGHT = 450
 func _on_body_entered(body):
 	if body is Player:
 		global.enteredLevel = true
-		global.diary_entries["poem_entry"] = global.poem_dir
+		global.diary_entries["poem_entry"] = global.poem_entry_dir
 		print(global.diary_entries["poem_entry"])
 		"""
 		var poem = global.poem
@@ -14,4 +14,4 @@ func _on_body_entered(body):
 		poem.global_position = centered_position
 		"""
 		# get_tree().root.add_child(poem)
-		get_tree().change_scene_to_file(global.poem_dir)
+		get_tree().change_scene_to_file(global.poem_entry_dir)

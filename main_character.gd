@@ -87,6 +87,21 @@ func run_dialogue(dialogue_string):
 	is_chatting = true
 	state = PlayerState.DIALOGUE
 	Dialogic.start(dialogue_string)
+	
+func _input(event):
+	if event.is_action_pressed("poem") and global.enteredLevel:
+		state = PlayerState.DIALOGUE
+		print("bruh")
+		$Camera2DPlayer/Poem.visible = !$Camera2DPlayer/Poem.visible
+		
+	if event.is_action_released("poem") and global.enteredLevel:
+		state = PlayerState.IDLE
+		$Camera2DPlayer/Poem.visible = !$Camera2DPlayer/Poem.visible
+		
+	if event.is_action_pressed("diary") and state != PlayerState.DIALOGUE and !global.enteredLevel and !global.waterfallLevel:
+		global.diary_found(self.position)
+		get_tree().change_scene_to_file(global.cover_dir)
+		
 
 func DialogicSignal(arg: String):
 	if arg == "end":

@@ -323,7 +323,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2ha8p"]
-radius = 1.75
+radius = 2.01556
 
 [node name="Waterfall" type="Node2D"]
 scale = Vector2(4, 4)
@@ -427,12 +427,12 @@ script = ExtResource("3_4eifh")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 texture_filter = 1
 position = Vector2(3.8743e-07, -1.90735e-06)
-scale = Vector2(0.285522, 0.285522)
+scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_x5mw2")
 animation = &"idle_boy"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(0, 3.75)
+position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_2ha8p")
 debug_color = Color(0.403922, 0.466667, 1, 0.419608)
 

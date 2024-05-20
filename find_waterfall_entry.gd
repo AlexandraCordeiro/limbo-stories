@@ -3,6 +3,10 @@ extends Area2D
 var entered = false
 var scene_changed = false
 
+func _ready():
+	global.read_mode = false
+	self.visible = true
+	
 func _on_body_entered(body):
 	if body is Player:
 		entered = true
@@ -17,7 +21,7 @@ func _on_body_exited(body):
 func _process(_delta):
 	if global.read_mode:
 		self.visible = false
-	if entered and !scene_changed and !global.diary_was_found:
+	if entered:
 		# Save the player position before changing the scene
 		global.position_find_diary["player"] = position
 		# Delay the scene change by one frame to ensure the position is saved

@@ -36,7 +36,7 @@ signal set_memory_challenge(star_type, correct_zone);
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+	global.enteredLevel = true
 	random.shuffle()
 	correct_zone = random[0]
 	

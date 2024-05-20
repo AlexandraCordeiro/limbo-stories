@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=3 uid="uid://hitwl0pvtdbw"]
+[gd_scene load_steps=87 format=3 uid="uid://hitwl0pvtdbw"]
 
 [ext_resource type="Texture2D" uid="uid://ct5sm0mqttykx" path="res://sprites/sprites/tilesets/grass.png" id="1_pqy6k"]
 [ext_resource type="Material" uid="uid://cpjk0nwss2tro" path="res://forest_gradient_material.tres" id="1_rllir"]
@@ -41,6 +41,7 @@
 [ext_resource type="PackedScene" uid="uid://c6v10c41hjvlg" path="res://star_animator_2.tscn" id="34_bi7oi"]
 [ext_resource type="Script" path="res://inventory.gd" id="39_uhesm"]
 [ext_resource type="TileSet" uid="uid://c6d5yufp5tdyg" path="res://tileset_inventory.tres" id="40_ntueq"]
+[ext_resource type="PackedScene" uid="uid://bwf8d0ihk67l8" path="res://poem.tscn" id="41_oebux"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l16xs"]
 shader = ExtResource("14_m5hlj")
@@ -821,7 +822,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fku8g"]
-radius = 2.25
+radius = 2.5
 
 [node name="Level" type="Node2D"]
 y_sort_enabled = true
@@ -960,6 +961,7 @@ script = ExtResource("6_rv8o1")
 [node name="Camera2DPlayer" type="Camera2D" parent="CharacterBody2D2"]
 
 [node name="inventory" type="Area2D" parent="CharacterBody2D2/Camera2DPlayer"]
+visible = false
 position = Vector2(-39, -36.25)
 script = ExtResource("39_uhesm")
 
@@ -978,15 +980,20 @@ layer_1/tile_data = PackedInt32Array()
 position = Vector2(-101.5, -32.75)
 shape = SubResource("CircleShape2D_3gili")
 
+[node name="Poem" parent="CharacterBody2D2/Camera2DPlayer" instance=ExtResource("41_oebux")]
+z_index = 3
+position = Vector2(-161, -101.25)
+scale = Vector2(1.25, 1.25)
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D2"]
 texture_filter = 1
 position = Vector2(2.98023e-08, -1.66893e-06)
-scale = Vector2(0.341878, 0.341878)
+scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_i8elu")
 animation = &"idle_boy"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
-position = Vector2(0, 4)
+position = Vector2(0, 5.25)
 shape = SubResource("CircleShape2D_fku8g")
 debug_color = Color(0.403922, 0.466667, 1, 0.419608)
 

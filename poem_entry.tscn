@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://ct6sw08d4ado6" path="res://diary_tile_set.tres" id="1_urf1x"]
 [ext_resource type="FontFile" uid="uid://dvi1mrl7seh6x" path="res://fonts/ReenieBeanie-Regular.ttf" id="2_an58r"]
-[ext_resource type="Script" path="res://close_button.gd" id="3_byo2l"]
+[ext_resource type="Script" path="res://closePoemButton.gd" id="3_jm07s"]
 [ext_resource type="Texture2D" uid="uid://ch0mau7q2ldkt" path="res://sprites/Pixel Paper v1.0/1 Sprites/Sprites/Design/Buttons & Holders/59.png" id="4_a7cno"]
 [ext_resource type="Script" path="res://previousPage.gd" id="5_i1ged"]
 
@@ -72,7 +72,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(272, 14.5)
-script = ExtResource("3_byo2l")
+script = ExtResource("3_jm07s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-0.25, 0.25)
