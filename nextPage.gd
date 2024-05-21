@@ -11,7 +11,7 @@ func _process(delta):
 	else:
 		self.visible = false
 
-func _on_input_event(event):
+func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == 1:    # button left == 1
 		var current_page = get_tree().current_scene.name
 		print("Current Page:", current_page)
