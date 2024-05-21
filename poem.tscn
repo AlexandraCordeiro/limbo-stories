@@ -2,6 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://ct6sw08d4ado6" path="res://diary_tile_set.tres" id="1_270ab"]
 [ext_resource type="FontFile" uid="uid://dvi1mrl7seh6x" path="res://fonts/ReenieBeanie-Regular.ttf" id="2_r2elv"]
+[ext_resource type="Script" path="res://poem_collision.gd" id="3_u8r5n"]
 [ext_resource type="Script" path="res://closePoemButton.gd" id="4_uod0c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6t1o5"]
@@ -78,3 +79,26 @@ position = Vector2(-0.25, 0)
 shape = SubResource("CircleShape2D_6t1o5")
 
 [connection signal="input_event" from="closeDiaryButton" to="closeDiaryButton" method="_on_input_event"]
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(272, 14.5)
+script = ExtResource("3_u8r5n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.25, 0.25)
+shape = SubResource("CircleShape2D_r6dio")
+
+[node name="closePoemButton" type="Area2D" parent="."]
+script = ExtResource("4_uod0c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="closePoemButton"]
+position = Vector2(271.75, 14.5)
+shape = SubResource("CircleShape2D_6t1o5")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[connection signal="input_event" from="Area2D" to="Area2D" method="_on_input_event"]
+[connection signal="body_entered" from="closePoemButton" to="closePoemButton" method="_on_body_entered"]
+[connection signal="body_exited" from="closePoemButton" to="closePoemButton" method="_on_body_exited"]
+[connection signal="input_event" from="closePoemButton" to="Area2D" method="_on_close_diary_button_input_event"]
+[connection signal="input_event" from="closePoemButton" to="closePoemButton" method="_on_input_event"]

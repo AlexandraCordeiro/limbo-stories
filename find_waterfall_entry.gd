@@ -19,7 +19,7 @@ func _on_body_exited(body):
 		# print("exited\n")
 
 func _process(_delta):
-	if global.read_mode:
+	if global.read_mode_diary:
 		self.visible = false
 	if entered:
 		# Save the player position before changing the scene
@@ -29,5 +29,5 @@ func _process(_delta):
 
 func _change_scene():
 	scene_changed = true
-	global.read_mode = true
+	global.read_mode_diary = true
 	get_tree().change_scene_to_file("res://second_entry.tscn")
