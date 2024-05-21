@@ -1,7 +1,7 @@
 [gd_scene load_steps=87 format=3 uid="uid://hitwl0pvtdbw"]
 
 [ext_resource type="Texture2D" uid="uid://ct5sm0mqttykx" path="res://sprites/sprites/tilesets/grass.png" id="1_pqy6k"]
-[ext_resource type="Material" uid="uid://cpjk0nwss2tro" path="res://forest_gradient_material.tres" id="1_rllir"]
+[ext_resource type="Material" path="res://forest_gradient_material.tres" id="1_rllir"]
 [ext_resource type="Script" path="res://puzzle_generation.gd" id="2_i8wq7"]
 [ext_resource type="Texture2D" uid="uid://bk8s182kbbae4" path="res://sprites/sprites/tilesets/decor_8x8.png" id="2_xbskp"]
 [ext_resource type="Texture2D" uid="uid://dqrershukh5rc" path="res://sprites/raou_free_top_down_adventure/topDown_baseTiles.png" id="5_hwthj"]
@@ -981,6 +981,7 @@ position = Vector2(-101.5, -32.75)
 shape = SubResource("CircleShape2D_3gili")
 
 [node name="Poem" parent="CharacterBody2D2/Camera2DPlayer" instance=ExtResource("41_oebux")]
+visible = false
 z_index = 3
 position = Vector2(-161, -101.25)
 scale = Vector2(1.25, 1.25)
