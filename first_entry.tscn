@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cct75v2er2a6x"]
+[gd_scene load_steps=12 format=3 uid="uid://cct75v2er2a6x"]
 
 [ext_resource type="TileSet" uid="uid://ct6sw08d4ado6" path="res://diary_tile_set.tres" id="1_ebxij"]
 [ext_resource type="FontFile" uid="uid://dvi1mrl7seh6x" path="res://fonts/ReenieBeanie-Regular.ttf" id="2_vxv5k"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://nextPage.gd" id="4_73hat"]
 [ext_resource type="Texture2D" uid="uid://ch0mau7q2ldkt" path="res://sprites/Pixel Paper v1.0/1 Sprites/Sprites/Design/Buttons & Holders/59.png" id="5_orr6g"]
 [ext_resource type="Script" path="res://previousPage.gd" id="6_fjnjj"]
+[ext_resource type="Texture2D" uid="uid://dxfoc1syhvgk5" path="res://holdbaby.png" id="7_vn868"]
 
 [sub_resource type="GDScript" id="GDScript_5ydsr"]
 script/source = "extends Node2D
@@ -78,7 +79,7 @@ scale = Vector2(0.05, 0.05)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("2_vxv5k")
-theme_override_font_sizes/normal_font_size = 150
+theme_override_font_sizes/normal_font_size = 135
 text = "Dear Diary,
  
 Today was the day my little grandson was born, I can't wait to hold him in my arms... my dear Alex"
@@ -93,6 +94,7 @@ position = Vector2(271.75, 14.5)
 shape = SubResource("CircleShape2D_vgx1b")
 
 [node name="nextPage" type="Area2D" parent="."]
+visible = false
 script = ExtResource("4_73hat")
 
 [node name="Sprite2D" type="Sprite2D" parent="nextPage"]
@@ -118,6 +120,11 @@ texture = ExtResource("5_orr6g")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="previousPage"]
 position = Vector2(58.75, 87.5)
 shape = SubResource("CircleShape2D_qx8eq")
+
+[node name="photo" type="Sprite2D" parent="."]
+position = Vector2(107.25, 96.25)
+scale = Vector2(0.109461, 0.109461)
+texture = ExtResource("7_vn868")
 
 [connection signal="input_event" from="closeDiaryButton" to="closeDiaryButton" method="_on_input_event"]
 [connection signal="input_event" from="nextPage" to="nextPage" method="_on_input_event"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bsd542m12qxna"]
+[gd_scene load_steps=10 format=3 uid="uid://bsd542m12qxna"]
 
 [ext_resource type="TileSet" uid="uid://ct6sw08d4ado6" path="res://diary_tile_set.tres" id="1_urf1x"]
 [ext_resource type="FontFile" uid="uid://dvi1mrl7seh6x" path="res://fonts/ReenieBeanie-Regular.ttf" id="2_an58r"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ch0mau7q2ldkt" path="res://sprites/Pixel Paper v1.0/1 Sprites/Sprites/Design/Buttons & Holders/59.png" id="4_a7cno"]
 [ext_resource type="Script" path="res://nextPage.gd" id="4_t0ccs"]
 [ext_resource type="Script" path="res://previousPage.gd" id="5_i1ged"]
+[ext_resource type="Texture2D" uid="uid://dlkhnf51oqnev" path="res://forest.png" id="7_egrfc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vgvcf"]
 radius = 10.7616
@@ -13,7 +14,7 @@ radius = 10.7616
 [sub_resource type="CircleShape2D" id="CircleShape2D_tcl4a"]
 radius = 5.7717
 
-[node name="PoemEntry" type="Node2D"]
+[node name="poem_entry" type="Node2D"]
 scale = Vector2(4, 4)
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -36,6 +37,25 @@ layer_5/tile_data = PackedInt32Array()
 layer_6/name = "ui"
 layer_6/tile_data = PackedInt32Array(16, 3407887, 0, 65552, 3407887, 1, 17, 3473423, 0, 65553, 3473423, 1)
 
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 172.5
+offset_top = 67.75
+offset_right = 1652.5
+offset_bottom = 1622.75
+scale = Vector2(0.05, 0.05)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_an58r")
+theme_override_font_sizes/normal_font_size = 135
+text = "When the thicket's dense,
+and your surroundings give no clues,
+Stay vigilant to sounds
+that might scare and confuse.
+
+And right before you find
+the beauty in the afterglow,
+Where the birds follow
+the wind is where you will go."
+
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
 offset_left = 72.0
 offset_top = 21.75
@@ -44,7 +64,7 @@ offset_bottom = 2341.75
 scale = Vector2(0.05, 0.05)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("2_an58r")
-theme_override_font_sizes/normal_font_size = 94
+theme_override_font_sizes/normal_font_size = 135
 text = "Pay close attention,
 as any false step in your path
 To the entrance will seamlessly
@@ -59,16 +79,7 @@ The forest will walk us through
 all the whimsy and the blight,
 With blessings of guidance
 in the form of stars, under broad daylight.
-
-When the thicket's dense,
-and your surroundings give no clues,
-Stay vigilant to sounds
-that might scare and confuse.
-
-And right before you find
-the beauty in the afterglow,
-Where the birds follow
-the wind is where you will go."
+"
 metadata/_edit_use_anchors_ = true
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -80,6 +91,7 @@ position = Vector2(-0.25, 0.25)
 shape = SubResource("CircleShape2D_vgvcf")
 
 [node name="nextPage" type="Area2D" parent="."]
+visible = false
 position = Vector2(261.75, 80)
 script = ExtResource("4_t0ccs")
 
@@ -103,6 +115,11 @@ texture = ExtResource("4_a7cno")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="previousPage"]
 shape = SubResource("CircleShape2D_tcl4a")
+
+[node name="Forest" type="Sprite2D" parent="."]
+position = Vector2(195.75, 42.75)
+scale = Vector2(0.0499654, 0.0499654)
+texture = ExtResource("7_egrfc")
 
 [connection signal="input_event" from="Area2D" to="Area2D" method="_on_input_event"]
 [connection signal="input_event" from="nextPage" to="nextPage" method="_on_input_event"]

@@ -1,16 +1,29 @@
 extends Area2D
-
+var hasNextPage
+var hasPreviousPage
+var current_page
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	current_page = get_tree().current_scene.name
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if global.read_mode_diary:
+	hasNextPage = checkNextPage()
+	if global.read_mode_diary && hasNextPage:
 		self.visible = true
 	else:
 		self.visible = false
 
+func checkNextPage():
+	var current_page = get_tree().current_scene.name
+	var keys = global.diary_entries.keys()
+	for i in range(keys.size()):
+		var key = keys[i]
+		if key == current_page && i == keys.size() - 1:
+			# nao ha mais paginas a seguir
+			return false
+	return true
+	
 func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == 1:    # button left == 1
 		var current_page = get_tree().current_scene.name

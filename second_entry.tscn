@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://u5c6udu6vf1j"]
+[gd_scene load_steps=9 format=3 uid="uid://u5c6udu6vf1j"]
 
 [ext_resource type="TileSet" uid="uid://ct6sw08d4ado6" path="res://diary_tile_set.tres" id="1_7ueoh"]
 [ext_resource type="FontFile" uid="uid://dvi1mrl7seh6x" path="res://fonts/ReenieBeanie-Regular.ttf" id="2_xx6s2"]
 [ext_resource type="Script" path="res://close_button.gd" id="3_n1dwx"]
 [ext_resource type="Texture2D" uid="uid://ch0mau7q2ldkt" path="res://sprites/Pixel Paper v1.0/1 Sprites/Sprites/Design/Buttons & Holders/59.png" id="4_kjh01"]
 [ext_resource type="Script" path="res://previousPage.gd" id="5_ekf56"]
+[ext_resource type="Texture2D" uid="uid://cv002k1kwnab1" path="res://gradma_boy.jpg" id="6_4yhoc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dpikl"]
 radius = 10.7616
@@ -59,6 +60,7 @@ position = Vector2(-0.25, 0.25)
 shape = SubResource("CircleShape2D_dpikl")
 
 [node name="nextPage" type="Area2D" parent="."]
+visible = false
 position = Vector2(261.75, 80)
 
 [node name="Sprite2D" type="Sprite2D" parent="nextPage"]
@@ -81,6 +83,11 @@ texture = ExtResource("4_kjh01")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="previousPage"]
 shape = SubResource("CircleShape2D_wb86e")
+
+[node name="GradmaBoy" type="Sprite2D" parent="."]
+position = Vector2(209.75, 102.75)
+scale = Vector2(0.0527344, 0.0527344)
+texture = ExtResource("6_4yhoc")
 
 [connection signal="input_event" from="Area2D" to="Area2D" method="_on_input_event"]
 [connection signal="input_event" from="previousPage" to="previousPage" method="_on_input_event"]
