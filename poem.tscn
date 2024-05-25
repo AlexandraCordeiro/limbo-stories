@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwf8d0ihk67l8"]
+[gd_scene load_steps=7 format=3 uid="uid://bwf8d0ihk67l8"]
 
 [ext_resource type="TileSet" uid="uid://ct6sw08d4ado6" path="res://diary_tile_set.tres" id="1_270ab"]
 [ext_resource type="FontFile" uid="uid://dvi1mrl7seh6x" path="res://fonts/ReenieBeanie-Regular.ttf" id="2_r2elv"]
 [ext_resource type="Script" path="res://poem_collision.gd" id="3_u8r5n"]
 [ext_resource type="Script" path="res://closePoemButton.gd" id="4_uod0c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r6dio"]
+radius = 10.7616
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6t1o5"]
 radius = 8.34416
@@ -13,17 +16,17 @@ scale = Vector2(4, 4)
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
-position = Vector2(-1, 0)
 rotation = 0.000828615
 tile_set = ExtResource("1_270ab")
 format = 2
 layer_0/name = "table"
+layer_0/tile_data = PackedInt32Array(16, 3407887, 0, 65552, 3407887, 1, 17, 3473423, 0, 65553, 3473423, 1)
 layer_1/name = "other_elements"
-layer_1/tile_data = PackedInt32Array(393221, 1441800, 8)
+layer_1/tile_data = PackedInt32Array(458759, 1441800, 8)
 layer_2/name = "diary"
-layer_2/tile_data = PackedInt32Array(65549, 3407887, 0, 131085, 3407887, 1, 65550, 3473423, 0, 131086, 3473423, 1, 65542, 2162696, 5, 131078, 2162696, 7, 196614, 2162696, 7, 262150, 2162696, 7, 327686, 2162696, 7, 393222, 2162696, 7, 458758, 2162696, 7, 524294, 2162696, 8, 65543, 2162696, 5, 131079, 2162696, 7, 196615, 2162696, 7, 262151, 2162696, 7, 327687, 2162696, 7, 393223, 2162696, 7, 458759, 2162696, 7, 524295, 2162696, 8, 65544, 2162696, 5, 131080, 2162696, 7, 196616, 2162696, 7, 262152, 2162696, 7, 327688, 2162696, 7, 393224, 2162696, 7, 458760, 2162696, 7, 524296, 2162696, 8, 65545, 2162696, 5, 131081, 2162696, 7, 196617, 2162696, 7, 262153, 2162696, 7, 327689, 2162696, 7, 393225, 2162696, 7, 458761, 2162696, 7, 524297, 2162696, 8, 65546, 2162696, 5, 131082, 2162696, 7, 196618, 2162696, 7, 262154, 2162696, 7, 327690, 2162696, 7, 393226, 2162696, 7, 458762, 2162696, 7, 524298, 2162696, 8, 65547, 2228232, 5, 131083, 2228232, 7, 196619, 2228232, 7, 262155, 2228232, 7, 327691, 2228232, 7, 393227, 2228232, 7, 458763, 2228232, 7, 524299, 2228232, 8, 65541, 2097160, 5, 131077, 2097160, 6, 196613, 2097160, 7, 262149, 2097160, 6, 327685, 2097160, 7, 393221, 2097160, 6, 458757, 2097160, 7, 524293, 2097160, 8)
+layer_2/tile_data = PackedInt32Array(65538, 2097160, 5, 131074, 2097160, 6, 196610, 2097160, 7, 262146, 2097160, 6, 327682, 2097160, 7, 393218, 2097160, 6, 458754, 2097160, 7, 524290, 2097160, 8, 65539, 2162696, 5, 131075, 2162696, 7, 196611, 2162696, 7, 262147, 2162696, 7, 327683, 2162696, 7, 393219, 2162696, 7, 458755, 2162696, 7, 524291, 2162696, 8, 65540, 2162696, 5, 131076, 2162696, 7, 196612, 2162696, 7, 262148, 2162696, 7, 327684, 2162696, 7, 393220, 2162696, 7, 458756, 2162696, 7, 524292, 2162696, 8, 65541, 2162696, 5, 131077, 2162696, 7, 196613, 2162696, 7, 262149, 2162696, 7, 327685, 2162696, 7, 393221, 2162696, 7, 458757, 2162696, 7, 524293, 2162696, 8, 65542, 2162696, 5, 131078, 2162696, 7, 196614, 2162696, 7, 262150, 2162696, 7, 327686, 2162696, 7, 393222, 2162696, 7, 458758, 2162696, 7, 524294, 2162696, 8, 65543, 2162696, 5, 131079, 2162696, 7, 196615, 2162696, 7, 262151, 2162696, 7, 327687, 2162696, 7, 393223, 2162696, 7, 458759, 2162696, 7, 524295, 2162696, 8, 65544, 2228232, 5, 131080, 2228232, 7, 196616, 2228232, 7, 262152, 2228232, 7, 327688, 2228232, 7, 393224, 2228232, 7, 458760, 2228232, 7, 524296, 2228232, 8)
 layer_3/name = "writing"
-layer_3/tile_data = PackedInt32Array(262149, 1441800, 10, 131082, 1441800, 8, 458762, 1441800, 10)
+layer_3/tile_data = PackedInt32Array()
 layer_4/name = "photo"
 layer_4/tile_data = PackedInt32Array()
 layer_5/name = "alex"
@@ -36,10 +39,10 @@ layer_8/name = "others"
 layer_8/tile_data = PackedInt32Array()
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
-offset_left = 95.75
-offset_top = 23.25
-offset_right = 1550.75
-offset_bottom = 2343.25
+offset_left = 44.0
+offset_top = 23.0
+offset_right = 1964.0
+offset_bottom = 2343.0
 scale = Vector2(0.05, 0.05)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("2_r2elv")
@@ -68,17 +71,6 @@ And right before you find
 the beauty in the afterglow,
 Where the birds follow
 the wind is where you will go."
-metadata/_edit_use_anchors_ = true
-
-[node name="closeDiaryButton" type="Area2D" parent="."]
-position = Vector2(224, 30.5)
-script = ExtResource("4_uod0c")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="closeDiaryButton"]
-position = Vector2(-0.25, 0)
-shape = SubResource("CircleShape2D_6t1o5")
-
-[connection signal="input_event" from="closeDiaryButton" to="closeDiaryButton" method="_on_input_event"]
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(272, 14.5)

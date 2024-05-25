@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bsd542m12qxna"]
+[gd_scene load_steps=9 format=3 uid="uid://bsd542m12qxna"]
 
 [ext_resource type="TileSet" uid="uid://ct6sw08d4ado6" path="res://diary_tile_set.tres" id="1_urf1x"]
 [ext_resource type="FontFile" uid="uid://dvi1mrl7seh6x" path="res://fonts/ReenieBeanie-Regular.ttf" id="2_an58r"]
 [ext_resource type="Script" path="res://closePoemButton.gd" id="3_jm07s"]
 [ext_resource type="Texture2D" uid="uid://ch0mau7q2ldkt" path="res://sprites/Pixel Paper v1.0/1 Sprites/Sprites/Design/Buttons & Holders/59.png" id="4_a7cno"]
+[ext_resource type="Script" path="res://nextPage.gd" id="4_t0ccs"]
 [ext_resource type="Script" path="res://previousPage.gd" id="5_i1ged"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vgvcf"]
@@ -80,6 +81,7 @@ shape = SubResource("CircleShape2D_vgvcf")
 
 [node name="nextPage" type="Area2D" parent="."]
 position = Vector2(261.75, 80)
+script = ExtResource("4_t0ccs")
 
 [node name="Sprite2D" type="Sprite2D" parent="nextPage"]
 texture_filter = 1
@@ -103,4 +105,5 @@ texture = ExtResource("4_a7cno")
 shape = SubResource("CircleShape2D_tcl4a")
 
 [connection signal="input_event" from="Area2D" to="Area2D" method="_on_input_event"]
+[connection signal="input_event" from="nextPage" to="nextPage" method="_on_input_event"]
 [connection signal="input_event" from="previousPage" to="previousPage" method="_on_input_event"]
