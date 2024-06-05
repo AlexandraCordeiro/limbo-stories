@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://LoadingZone.gd" id="1_efamk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7rc1c"]
+size = Vector2(29.5, 20)
 
 [node name="LoadingZone" type="Node2D"]
 script = ExtResource("1_efamk")
@@ -10,6 +11,7 @@ script = ExtResource("1_efamk")
 [node name="Loader" type="Area2D" parent="."]
 
 [node name="LoadBox" type="CollisionShape2D" parent="Loader"]
+position = Vector2(0, 1)
 scale = Vector2(4, 4)
 shape = SubResource("RectangleShape2D_7rc1c")
 

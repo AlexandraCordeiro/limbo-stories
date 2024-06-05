@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+TransitionScreen="*res://transition_screen.tscn"
 global="*res://global_script.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 

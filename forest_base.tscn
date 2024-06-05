@@ -961,7 +961,6 @@ script = ExtResource("6_rv8o1")
 [node name="Camera2DPlayer" type="Camera2D" parent="CharacterBody2D2"]
 
 [node name="inventory" type="Area2D" parent="CharacterBody2D2/Camera2DPlayer"]
-visible = false
 position = Vector2(-39, -36.25)
 script = ExtResource("39_uhesm")
 
@@ -972,12 +971,12 @@ scale = Vector2(0.5, 0.5)
 tile_set = ExtResource("40_ntueq")
 format = 2
 layer_0/name = "box"
-layer_0/tile_data = PackedInt32Array(65536, 2097153, 11)
+layer_0/tile_data = PackedInt32Array(131074, 2097153, 11)
 layer_1/name = "diary"
 layer_1/tile_data = PackedInt32Array()
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2/Camera2DPlayer/inventory"]
-position = Vector2(-101.5, -32.75)
+position = Vector2(-85, -25)
 shape = SubResource("CircleShape2D_3gili")
 
 [node name="Poem" parent="CharacterBody2D2/Camera2DPlayer" instance=ExtResource("41_oebux")]
