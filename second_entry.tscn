@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://close_button.gd" id="3_n1dwx"]
 [ext_resource type="Texture2D" uid="uid://ch0mau7q2ldkt" path="res://sprites/Pixel Paper v1.0/1 Sprites/Sprites/Design/Buttons & Holders/59.png" id="4_kjh01"]
 [ext_resource type="Script" path="res://previousPage.gd" id="5_ekf56"]
-[ext_resource type="Texture2D" uid="uid://cv002k1kwnab1" path="res://gradma_boy.jpg" id="6_4yhoc"]
+[ext_resource type="Texture2D" uid="uid://c4rvysuxbhjft" path="res://grandma_boy.jpeg" id="6_5241l"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dpikl"]
 radius = 10.7616
@@ -87,7 +87,7 @@ shape = SubResource("CircleShape2D_wb86e")
 [node name="GradmaBoy" type="Sprite2D" parent="."]
 position = Vector2(209.75, 102.75)
 scale = Vector2(0.0527344, 0.0527344)
-texture = ExtResource("6_4yhoc")
+texture = ExtResource("6_5241l")
 
 [connection signal="input_event" from="Area2D" to="Area2D" method="_on_input_event"]
 [connection signal="input_event" from="previousPage" to="previousPage" method="_on_input_event"]

@@ -4,12 +4,13 @@ var entered = false
 var scene_changed = false
 
 func _ready():
-	global.read_mode_diary = false
-	self.visible = true
+	if global.read_mode_diary == false:
+		self.show()
 	
 func _on_body_entered(body):
 	if body is Player:
 		entered = true
+		global.picked_up_second_entry = true
 		global.diary_entries["second_entry"] = global.second_entry_dir
 		# print("entered\n")
 
@@ -32,3 +33,10 @@ func _change_scene():
 	scene_changed = true
 	global.read_mode_diary = true
 	get_tree().change_scene_to_file("res://second_entry.tscn")
+
+
+func set_visibility(visible):
+	if visible:
+		self.show()
+	else:
+		self.hide()

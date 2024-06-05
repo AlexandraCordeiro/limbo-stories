@@ -10,8 +10,10 @@ size = Vector2(1432, 26)
 script = ExtResource("1_yjb8o")
 
 [node name="Star" type="AnimatedSprite2D" parent="."]
+rotation = -0.514872
 scale = Vector2(0.2, 0.2)
 sprite_frames = ExtResource("2_c0hr4")
+frame_progress = 0.548441
 
 [node name="Area2D" type="Area2D" parent="."]
 

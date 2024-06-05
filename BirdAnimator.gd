@@ -12,7 +12,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if entered:
-		birdy.position += Vector2(0, -1)
+		birdy.position += Vector2(0, -0.7)
 
 
 

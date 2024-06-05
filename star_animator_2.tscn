@@ -1,14 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://c6v10c41hjvlg"]
+[gd_scene load_steps=9 format=3 uid="uid://c6v10c41hjvlg"]
 
 [ext_resource type="Script" path="res://StarAnimator.gd" id="1_txagb"]
-[ext_resource type="Shader" path="res://star_animator_2.gdshader" id="2_6big4"]
 [ext_resource type="Texture2D" uid="uid://i7upp7rwvmwl" path="res://sprites/S001_nyknck.png" id="2_a3mc1"]
-[ext_resource type="Texture2D" uid="uid://crwayo44t1y2d" path="res://opening_scene_gradient.tres" id="3_txt2y"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_2u0cd"]
-shader = ExtResource("2_6big4")
-shader_parameter/mix_amount = 1.5
-shader_parameter/gradient = ExtResource("3_txt2y")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o75oc"]
 atlas = ExtResource("2_a3mc1")
@@ -59,7 +52,6 @@ size = Vector2(1411, 26)
 script = ExtResource("1_txagb")
 
 [node name="Star" type="AnimatedSprite2D" parent="."]
-material = SubResource("ShaderMaterial_2u0cd")
 position = Vector2(0, -4)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_cher5")

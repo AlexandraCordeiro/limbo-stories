@@ -5,6 +5,7 @@ var current_page
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	current_page = get_tree().current_scene.name
+	hasNextPage = checkNextPage()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -16,7 +17,9 @@ func _process(delta):
 
 func checkNextPage():
 	var current_page = get_tree().current_scene.name
+	print(current_page)
 	var keys = global.diary_entries.keys()
+	print(keys)
 	for i in range(keys.size()):
 		var key = keys[i]
 		if key == current_page && i == keys.size() - 1:

@@ -78,7 +78,7 @@ func _ready():
 
 func gen_final_puzzle():
 	correct_zone = 2
-	tilemap.set_layer_enabled(5, true)
+	tilemap.set_layer_enabled(6, true)
 	birdy1.visible = true
 	birdy2.visible = true
 	birdy3.visible = true
@@ -142,24 +142,6 @@ func gen_flowerbed_puzzle():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
-
-#func _on_loading_zone_load_zone_entered(load_zone):
-	#logic if correct loading zone
-	
-	#level_changed.emit(level_type, 0, correct_zone);
-	#return
-
-
-#func _on_loading_zone_1_load_zone_entered(load_zone):
-	#level_changed.emit(level_type, 1, correct_zone);
-	#return
-
-
-#func _on_loading_zone_2_load_zone_entered(load_zone):
-	#level_changed.emit(level_type, 2, correct_zone);
-	#return
-
 
 func _on_left_zone_load_zone_entered():
 	level_changed.emit(level_type, 0, correct_zone)

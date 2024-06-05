@@ -7,8 +7,10 @@ var read_mode_diary = false
 var read_mode_poem = false
 var enteredLevel = false
 var waterfallLevel = false
+var enteredCave = 0
 var positionFirstScene = true
 var tilemap_firstScene = null
+var picked_up_second_entry = false
 
 var cover = preload("res://cover.tscn").instantiate()
 var waterfall = preload("res://waterfall.tscn").instantiate()
@@ -17,6 +19,7 @@ var second_entry = preload("res://second_entry.tscn").instantiate()
 var poem = preload("res://poem.tscn").instantiate()
 var poem_entry = preload("res://poem_entry.tscn").instantiate()
 var level_sw = preload("res://level_switcher.tscn").instantiate()
+var cave = preload("res://cave.tscn").instantiate()
 
 var cover_dir = "res://cover.tscn"
 var waterfall_dir = "res://waterfall.tscn"
@@ -25,6 +28,7 @@ var second_entry_dir = "res://second_entry.tscn"
 var poem_dir = "res://poem.tscn"
 var poem_entry_dir = "res://poem_entry.tscn"
 var level_sw_dir = "res://level_switcher.tscn"
+var cave_dir = "res://cave.tscn"
 
 var scene_dir = "res://scene.tscn"
 

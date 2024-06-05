@@ -949,6 +949,7 @@ rotation = 0.298451
 [node name="StarAnimator" parent="." instance=ExtResource("33_dmd2l")]
 visible = false
 position = Vector2(132.5, 69.75)
+scale = Vector2(0.7, 0.7)
 
 [node name="StarAnimator2" parent="." instance=ExtResource("34_bi7oi")]
 visible = false
@@ -961,6 +962,7 @@ script = ExtResource("6_rv8o1")
 [node name="Camera2DPlayer" type="Camera2D" parent="CharacterBody2D2"]
 
 [node name="inventory" type="Area2D" parent="CharacterBody2D2/Camera2DPlayer"]
+visible = false
 position = Vector2(-39, -36.25)
 script = ExtResource("39_uhesm")
 

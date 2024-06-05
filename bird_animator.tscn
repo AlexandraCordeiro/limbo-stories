@@ -87,9 +87,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b72kv"]
-size = Vector2(925, 134)
+size = Vector2(925, 121.333)
 
 [node name="BirdAnimator" type="Node2D"]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_6d4tc")
 
 [node name="Bird" type="AnimatedSprite2D" parent="."]
@@ -101,7 +102,7 @@ animation = &"fly_away"
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(3.5, -29)
+position = Vector2(3.5, -35.3333)
 shape = SubResource("RectangleShape2D_b72kv")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
