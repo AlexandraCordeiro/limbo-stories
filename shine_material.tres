@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://f4ymhcatlkjo"]
+
+[ext_resource type="Shader" path="res://shine.gdshader" id="1_55e77"]
+
+[resource]
+shader = ExtResource("1_55e77")
+shader_parameter/shine_color = Color(1, 1, 1, 0.25)
+shader_parameter/line_width = 0.01
+shader_parameter/angle = 1.4399
+shader_parameter/speed = 0.3
+shader_parameter/wait_cycles = 1.0

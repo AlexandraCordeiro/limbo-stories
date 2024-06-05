@@ -448,6 +448,7 @@ polygon = PackedVector2Array(248.75, 124, 248.25, 84.75, 281.25, 84, 281.75, 124
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_kuu40")
+volume_db = -15.153
 
 [connection signal="body_entered" from="diary" to="diary" method="_on_body_entered"]
 [connection signal="body_exited" from="diary" to="diary" method="_on_body_exited"]
