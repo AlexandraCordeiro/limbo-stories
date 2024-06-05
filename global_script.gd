@@ -24,6 +24,7 @@ var first_entry_dir = "res://first_entry.tscn"
 var second_entry_dir = "res://second_entry.tscn"
 var poem_dir = "res://poem.tscn"
 var poem_entry_dir = "res://poem_entry.tscn"
+var level_sw_dir = "res://level_switcher.tscn"
 
 var scene_dir = "res://scene.tscn"
 

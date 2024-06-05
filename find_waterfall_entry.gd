@@ -4,12 +4,13 @@ var entered = false
 var scene_changed = false
 
 func _ready():
-	global.read_mode = false
+	global.read_mode_diary = false
 	self.visible = true
 	
 func _on_body_entered(body):
 	if body is Player:
 		entered = true
+		global.diary_entries["second_entry"] = global.second_entry_dir
 		# print("entered\n")
 
 func _on_body_exited(body):
