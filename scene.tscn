@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://bnjuvaqkhbvft"]
+[gd_scene load_steps=60 format=3 uid="uid://bnjuvaqkhbvft"]
 
 [ext_resource type="Script" path="res://scene.gd" id="1_8ojph"]
 [ext_resource type="Texture2D" uid="uid://f6ewpclyghm7" path="res://sprites/sprout_lands_pack/Tilesets/Fences.png" id="1_ws8ki"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://c52t50qtedakd" path="res://sprites/Character2D/022.png" id="21_hi0p6"]
 [ext_resource type="Script" path="res://detects_diary_collision.gd" id="23_1q7dr"]
 [ext_resource type="Texture2D" uid="uid://b0o6nj218r5fc" path="res://sprites/Free Paper UI System/1 Sprites/Content/1 Items/1.png" id="23_2gv7b"]
+[ext_resource type="Script" path="res://forest_entry.gd" id="24_btit2"]
 [ext_resource type="Script" path="res://inventory.gd" id="24_yu5ds"]
 [ext_resource type="Script" path="res://poem_collision.gd" id="26_jmqyp"]
 [ext_resource type="Texture2D" uid="uid://xeom4wgtvxwk" path="res://Banner_Vertical.png" id="26_y0ewv"]
@@ -1302,6 +1303,9 @@ radius = 3.5
 [sub_resource type="CircleShape2D" id="CircleShape2D_uirn3"]
 radius = 5.75543
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mho18"]
+size = Vector2(31.75, 20)
+
 [node name="Scene" type="Node2D"]
 scale = Vector2(4, 4)
 script = ExtResource("1_8ojph")
@@ -1319,6 +1323,7 @@ layer_2/tile_data = PackedInt32Array(1114107, 65555, 8, 1179643, 65555, 8, 12451
 layer_3/name = "river"
 layer_3/tile_data = PackedInt32Array(131076, 19, 15, 196612, 19, 16, 262148, 19, 17, 131077, 65555, 15, 196613, 65555, 16, 262149, 262163, 16, 327685, 19, 16, 393221, 19, 17, 589829, 19, 15, 655365, 19, 17, 131078, 65555, 15, 196614, 65555, 16, 262150, 196627, 16, 327686, 196627, 17, 393222, 65555, 17, 458758, 19, 15, 524294, 19, 16, 589830, 262163, 17, 655366, 65555, 17, 7, 19, 15, 65543, 19, 17, 131079, 131091, 15, 196615, 131091, 16, 262151, 131091, 17, 327687, 131091, 15, 393223, 327699, 16, 458759, 262163, 17, 524295, 196627, 16, 589831, 196627, 17, 655367, 65555, 17, 8, 65555, 15, 65544, 262163, 16, 131080, 19, 17, 196616, 19, 15, 262152, 19, 16, 327688, 19, 17, 393224, 65555, 15, 458760, 196627, 16, 524296, 327699, 16, 589832, 327699, 17, 655368, 131091, 17, 9, 65555, 15, 65545, 65555, 16, 131081, 65555, 17, 196617, 65555, 15, 262153, 65555, 16, 327689, 262163, 16, 393225, 262163, 17, 458761, 262163, 16, 524297, 262163, 17, 589833, 65555, 17, 10, 65555, 15, 65546, 196627, 16, 131082, 131091, 17, 196618, 65555, 15, 262154, 196627, 16, 327690, 196627, 17, 393226, 65555, 16, 458762, 196627, 16, 524298, 131091, 16, 589834, 131091, 17, 11, 65555, 15, 65547, 65555, 17, 196619, 131091, 15, 262155, 131091, 17, 327691, 131091, 15, 393227, 131091, 16, 458763, 131091, 17, 12, 131091, 15, 65548, 131091, 17)
 layer_4/name = "tunel_trees"
+layer_4/enabled = false
 layer_4/tile_data = PackedInt32Array(-851942, 131091, 8, -786406, 131091, 8, -720870, 131091, 8, -655334, 131091, 8, -589798, 131091, 9, -524262, 131091, 8, -458726, 131091, 8, -393190, 131091, 8, -327654, 65555, 8, -262118, 131091, 8, -196582, 131091, 8, -131046, 131091, 9, -65510, 131091, 8, 26, 131091, 8, 65562, 131091, 8, 131098, 65555, 8, 196634, 65555, 9, -851941, 131091, 9, -786405, 131091, 8, -720869, 131091, 9, -655333, 131091, 9, -589797, 131091, 8, -524261, 131091, 8, -458725, 131091, 9, -393189, 131091, 8, -327653, 65555, 8, -262117, 131091, 9, -196581, 131091, 9, -131045, 131091, 8, -65509, 131091, 8, 27, 131091, 9, 65563, 131091, 8, 131099, 65555, 8, 196635, 65555, 9)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
@@ -1338,12 +1343,12 @@ scale = Vector2(0.5, 0.5)
 tile_set = ExtResource("21_147ri")
 format = 2
 layer_0/name = "box"
-layer_0/tile_data = PackedInt32Array(0, 393216, 9, 1, 458752, 9, 2, 524288, 9, 65536, 393216, 10, 65537, 2097153, 11, 65538, 524288, 10, 131072, 393216, 11, 131073, 458752, 11, 131074, 524288, 11)
+layer_0/tile_data = PackedInt32Array(131074, 2097153, 11)
 layer_1/name = "diary"
 layer_1/tile_data = PackedInt32Array(65537, 2097154, 11)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Camera2DPlayer/inventory"]
-position = Vector2(-93, -33)
+position = Vector2(-85, -24.75)
 shape = SubResource("CircleShape2D_ieoq4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
@@ -1386,8 +1391,18 @@ texture = ExtResource("26_y0ewv")
 position = Vector2(0.0625076, 0.0625)
 shape = SubResource("CircleShape2D_uirn3")
 
+[node name="forest_entry" type="Area2D" parent="."]
+script = ExtResource("24_btit2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="forest_entry"]
+position = Vector2(431.75, -93)
+shape = SubResource("RectangleShape2D_mho18")
+
+[node name="Spawn" type="Marker2D" parent="forest_entry"]
+
 [connection signal="input_event" from="CharacterBody2D/Camera2DPlayer/inventory" to="CharacterBody2D/Camera2DPlayer/inventory" method="_on_input_event"]
 [connection signal="body_entered" from="diary" to="diary" method="_on_body_entered"]
 [connection signal="body_exited" from="diary" to="diary" method="_on_body_exited"]
 [connection signal="body_entered" from="poem" to="poem" method="_on_body_entered"]
 [connection signal="body_exited" from="poem" to="poem" method="_on_body_exited"]
+[connection signal="body_entered" from="forest_entry" to="forest_entry" method="_on_body_entered"]

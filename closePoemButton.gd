@@ -8,5 +8,4 @@ func _process(_delta):
 
 func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == 1:	# button left == 1
-		#get_tree().change_scene_to_file("res://level_switcher.tscn")
-		get_tree().change_scene_to_file(global.scene_dir)
+		get_tree().change_scene_to_file(global.what_scene)
