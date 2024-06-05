@@ -1375,6 +1375,7 @@ position = Vector2(-16.75, 288.75)
 script = ExtResource("23_1q7dr")
 
 [node name="Sprite2D" type="Sprite2D" parent="diary"]
+z_index = 5
 texture_filter = 1
 position = Vector2(0.249989, -1.52588e-05)
 scale = Vector2(0.484375, 0.484375)
